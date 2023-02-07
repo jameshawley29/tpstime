@@ -10,7 +10,6 @@
 
 
 <script>
-	//test
     import Time from './Time.svelte';
     import Period from './Periods.svelte'
     import MenuButton from './MenuButton.svelte';
