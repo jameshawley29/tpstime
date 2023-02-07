@@ -74,6 +74,8 @@
   }
 ]
 
+let weekSchedule = ["B","C","B","C","A"]
+
 let current_period = 0;
 
 
@@ -81,7 +83,7 @@ let current_period = 0;
 
 <body>
 	<div id="forcast-bar">
-		<Forcast></Forcast>
+		<Forcast weekSchedule={weekSchedule}></Forcast>
 	</div>
     <div id="menu-bar">
         <MenuButton></MenuButton>

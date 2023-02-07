@@ -13,7 +13,7 @@
             if (i == current_period) {
                 font_size = 3
                 font_color = "white"
-                shadow = "5px 5px 15px rgba(0, 0, 0, 0.2)"
+                shadow = "5px 5px 15px rgba(100, 100, 100, 0.3)"
             } else {
                 font_size = 1.736
                 font_color = "black"
