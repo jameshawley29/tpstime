@@ -5,7 +5,7 @@
     }
 </script>
 
-<div style="{pressed? "transform: translateX(-20px)": ""}">
+<div style="{pressed? "transform: translateX(0px)": ""}">
     <svg on:click={clicked} on:keydown={clicked} width="81" height="87" viewBox="0 0 81 87" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="Group">
         <path style="{pressed? "transform: rotate(45deg) translate(-15%, 30%)": ""}" id="Vector1" d="M70.875 14.1375H10.125V16.3125H70.875V14.1375Z" fill="black"/>
@@ -39,7 +39,7 @@
         justify-content: space-evenly;
         align-content: center;
 
-        transform: translateX(200px);
+        transform: translateX(195px);
     }
 
     button.button {

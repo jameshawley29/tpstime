@@ -13,6 +13,7 @@
     import Time from './Time.svelte';
     import Period from './Periods.svelte'
     import MenuButton from './MenuButton.svelte';
+	import Forcast from './Forcast.svelte';
 
     let periods = [
   {
@@ -79,6 +80,9 @@ let current_period = 0;
 </script>
 
 <body>
+	<div id="forcast-bar">
+		<Forcast></Forcast>
+	</div>
     <div id="menu-bar">
         <MenuButton></MenuButton>
     </div>
@@ -141,4 +145,12 @@ let current_period = 0;
         justify-content: space-around;
 
     }
+
+	#forcast-bar {
+		position: absolute;
+
+		top: 5px;
+		left: 50%;
+		margin-left: -20vw;
+	}
 </style>
