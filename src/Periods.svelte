@@ -22,18 +22,27 @@
         }
         update()
         setInterval(update,1000)
+
+        let hoverableTimeShown = "";
+        function hoverd(entering) {
+            if (entering) {
+                hoverableTimeShown = period.time[0]
+            } else {
+                hoverableTimeShown = ""
+            }
+        }
     
     </script>
     
     <div style="font-size: {font_size}vw; color: {font_color}; text-shadow: {shadow}">
-        <p id="name" >
+        <p id="name" on:mouseenter={hoverd(true)} on:mouseleave={hoverd(false)} on:focus={hoverd(true)}>
             {period.name}
         </p>
         <p class="hoverable">
             -
         </p>
         <p id="time" class="hoverable">
-            {period.time[0]}
+            {hoverableTimeShown}
         </p>
         
     </div>
@@ -61,17 +70,9 @@
             padding-left: 1vw;
         }
     
-        .hoverable {
-            opacity: 0%;
-        }
     
         .hoverable {
             transition: 0.2s ease-in-out;
         }
-    
-        /*
-        div:hover .hoverable {
-            opacity: 100%;
-        }
-        */
+        
     </style>
