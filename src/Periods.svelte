@@ -64,8 +64,9 @@
     
     
         .hoverable {
-            transition: 0.2s ease-in-out;
+            transition: 0.25s ease;
             opacity: 0%;
+            cursor:default;
         }
 
         #name:hover ~ .hoverable {
