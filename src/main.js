@@ -1,4 +1,5 @@
 import App from './App.svelte';
+import Mobile from './mobile/Mobile.svelte'
 
 if (screen.width>500) {
 	const app = new App({
@@ -6,7 +7,7 @@ if (screen.width>500) {
 	});
 }
 else {
-	const app = new Time({
+	const app = new Mobile({
 		target: document.body
 	})
 }
