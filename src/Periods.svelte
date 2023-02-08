@@ -23,26 +23,18 @@
         update()
         setInterval(update,1000)
 
-        let hoverableTimeShown = "";
-        function hoverd(entering) {
-            if (entering) {
-                hoverableTimeShown = period.time[0]
-            } else {
-                hoverableTimeShown = ""
-            }
-        }
     
     </script>
     
     <div style="font-size: {font_size}vw; color: {font_color}; text-shadow: {shadow}">
-        <p id="name" on:mouseenter={hoverd(true)} on:mouseleave={hoverd(false)} on:focus={hoverd(true)}>
+        <p id="name">
             {period.name}
         </p>
         <p class="hoverable">
             -
         </p>
         <p id="time" class="hoverable">
-            {hoverableTimeShown}
+            {period.time[0]}
         </p>
         
     </div>
@@ -73,6 +65,11 @@
     
         .hoverable {
             transition: 0.2s ease-in-out;
+            opacity: 0%;
+        }
+
+        #name:hover ~ .hoverable {
+            opacity: 100%;
         }
         
     </style>
