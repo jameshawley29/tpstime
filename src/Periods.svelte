@@ -16,11 +16,11 @@
     
         function update() {
             if (i == current_period) {
-                font_size = 3
+                font_size = 6
                 font_color = "white"
                 shadow = "5px 5px 15px rgba(100, 100, 100, 0.3)"
             } else {
-                font_size = 1.736
+                font_size = 3.4
                 font_color = "black"
                 shadow = ""
             }
@@ -31,7 +31,7 @@
     
     </script>
     
-    <div style="font-size: {font_size}vw; color: {font_color}; text-shadow: {shadow}">
+    <div style="font-size: {font_size}vh; color: {font_color}; text-shadow: {shadow}">
         <p id="name">
             {period.name}
         </p>
