@@ -59,7 +59,7 @@
     }
     updateTime();
 
-    setInterval(updateTime,1000)
+    setInterval(updateTime,100)
 
 
 </script>
