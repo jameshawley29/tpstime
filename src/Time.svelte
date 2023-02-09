@@ -34,17 +34,20 @@
 
     function updateTime() {
 
-        if (current_period<periods.length-1) {
-            while (getSecondsTillClass(periods[current_period]["time"][1])<0) {
-                //console.log(getSecondsTillClass(periods[start_index]["time"][1]))
+        while (current_period<periods.length) {
+            //console.log(getSecondsTillClass(periods[start_index]["time"][1]))
+            if(current_period<0 || getSecondsTillClass(periods[current_period]["time"][1])<0) {
                 current_period+=1
             }
-    
+        }
+
+        if (current_period>=periods.length) {
+            time = "0:00"
+        } else {
             let time_till_end = getSecondsTillClass(periods[current_period].time[1]);
             time = seconds_to_timestring(time_till_end);
-        } else {
-            time = "0:00"
         }
+
     }
     updateTime();
 

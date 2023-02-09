@@ -69,7 +69,7 @@
     "name": "Study Period",
     "time": [
       "14:45",
-      "19:35"
+      "20:35"
     ]
   }
 ]
@@ -79,7 +79,7 @@
 
 let weekSchedule = ["B","C","B","C","A"]
 
-let current_period = 0;
+let current_period = -1;
 
 
 </script>
