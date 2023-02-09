@@ -34,7 +34,7 @@
 
     function updateTime() {
 
-        if (current_period<periods.length) {
+        if (current_period<periods.length-1) {
             while (getSecondsTillClass(periods[current_period]["time"][1])<0) {
                 //console.log(getSecondsTillClass(periods[start_index]["time"][1]))
                 current_period+=1
