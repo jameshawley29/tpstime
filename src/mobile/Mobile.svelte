@@ -1,5 +1,25 @@
+<svelte:head>
+	<title>Test</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap"
+		rel="stylesheet"
+	/>
+</svelte:head>
+
+<script>
+    import MobileTime from "./MobileTime.svelte";
+
+    import { periods } from '../stores'
+
+    let current_period = -1;
+</script>
+
 <body>
-    <p>Im sorry, but there is no mobile version for this website atm</p>
+    <div id="time">
+        <MobileTime periods={periods} bind:current_period={current_period}></MobileTime>
+    </div>
 </body>
 
 <style>
@@ -9,7 +29,13 @@
         text-align: center;
     } 
 
-    p {
-        font-size: 2rem;
+    #time {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border: 3px solid green;
+        padding: 10px;
     }
+    
 </style>

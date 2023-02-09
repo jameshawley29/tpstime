@@ -9,7 +9,6 @@
         let font_color = "black"
         let shadow = ""
 
-        import {alert} from './stores';
         //HEHRERERERERERERERERERE working with alerts and subscriptions
 
         
