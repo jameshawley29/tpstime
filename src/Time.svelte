@@ -33,11 +33,19 @@
 
 
     function updateTime() {
+        let stop = 50;
 
         while (current_period<periods.length) {
             //console.log(getSecondsTillClass(periods[start_index]["time"][1]))
             if(current_period<0 || getSecondsTillClass(periods[current_period]["time"][1])<0) {
                 current_period+=1
+            } else {
+                break
+            }
+            stop+=1
+            if (stop >100) {
+                console.log(current_period)
+                return 1;
             }
         }
 

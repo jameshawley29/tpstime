@@ -96,10 +96,11 @@ let current_period = -1;
         <Period period={period} i={i} bind:current_period={current_period}></Period>
         {/each}
     </div>
+	
     <div id="time-div">
-        <!--<Time {periods} bind:current_period={current_period}></Time>-->
         <Time {periods} bind:current_period={current_period}></Time>
     </div>
+	
     <p id="my-name">James Hawley</p>
 </body>
 

@@ -61,6 +61,7 @@ let periods = [
   ]
 
 if (window.innerWidth>500) {
+	console.log("ehllowww");
 	const app = new App({
 		target: document.body,
 	});
