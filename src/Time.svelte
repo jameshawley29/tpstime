@@ -42,6 +42,8 @@
     
             let time_till_end = getSecondsTillClass(periods[current_period].time[1]);
             time = seconds_to_timestring(time_till_end);
+        } else {
+            time = "0:00"
         }
     }
     updateTime();

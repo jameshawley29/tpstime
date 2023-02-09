@@ -8,6 +8,11 @@
         let font_size = 1.736
         let font_color = "black"
         let shadow = ""
+
+        import {alert} from './stores';
+        //HEHRERERERERERERERERERE working with alerts and subscriptions
+
+        
     
         function update() {
             if (i == current_period) {
