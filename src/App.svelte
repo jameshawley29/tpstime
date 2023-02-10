@@ -80,6 +80,8 @@ let current_period = -1;
 
         right: 17%;
         top: 50%;
+
+        transform: translateY(-50%);
     }
 
     #periods {

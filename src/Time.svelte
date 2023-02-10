@@ -73,7 +73,6 @@
         font-size: 14vw;
         font-family: Roboto;
         margin: 0;
-        transform: translateY(-50%);
 
         align-items: center;
         text-align: center;
