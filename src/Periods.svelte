@@ -63,7 +63,9 @@
         }
     
         div > p {
-            padding-left: 1vw;
+            padding: 0 1vw;
+            margin: 0;
+            
         }
     
     
