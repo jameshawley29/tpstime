@@ -1,5 +1,5 @@
 import { writable } from 'svelte/store'
-
+/*
 export let periods = [
     {
       "name": "Advisory",
@@ -58,5 +58,79 @@ export let periods = [
       ]
     }
   ]
+*/
+
+export let periods = [
+  {
+    "name": "Advisory",
+    "time": [
+      "08:00",
+      "08:05"
+    ]
+  },
+  {
+    "name": "1st Period",
+    "time": [
+      "08:10",
+      "08:40"
+    ]
+  },
+  {
+    "name": "2nd Period",
+    "time": [
+      "08:45",
+      "09:15"
+    ]
+  },
+  {
+    "name": "Break/Flex",
+    "time": [
+      "09:20",
+      "09:30"
+    ]
+  },
+  {
+    "name": "3rd Period",
+    "time": [
+      "9:35",
+      "10:05"
+    ]
+  },
+  {
+    "name": "4th Period",
+    "time": [
+      "10:10",
+      "10:40"
+    ]
+  },
+  {
+    "name": "5th Period",
+    "time": [
+      "10:45",
+      "11:15"
+    ]
+  },
+  {
+    "name": "Us Lunch",
+    "time": [
+      "11:20",
+      "11:50"
+    ]
+  },
+  {
+    "name": "6th Period",
+    "time": [
+      "11:55",
+      "12:25"
+    ]
+  },
+  {
+    "name": "7th Period",
+    "time": [
+      "12:30",
+      "13:00"
+    ]
+  }
+]
 
 export let weekSchedule = ["B","C","B","C","A"]
