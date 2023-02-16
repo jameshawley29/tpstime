@@ -10,13 +10,19 @@
 
 <script>
     import MobileTime from "./MobileTime.svelte";
+    import MobileForcast from "./MobileForcast.svelte";
 
-    import { periods } from '../stores'
+    import { periods, weekSchedule } from '../stores';
+
+
 
     let current_period = -1;
 </script>
 
 <body>
+    <div id="forcast">
+        <MobileForcast weekSchedule={weekSchedule}></MobileForcast>
+    </div>
     <div id="time">
         <MobileTime periods={periods} bind:current_period={current_period}></MobileTime>
     </div>
@@ -24,18 +30,22 @@
 
 <style>
     body {
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    } 
+        background-color: #62C6F2;
+    }
 
     #time {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
-        border: 3px solid green;
         padding: 10px;
     }
+
+    #forcast {
+        align-items: center;
+
+        padding-top: 1vh;
+    }
+
     
 </style>

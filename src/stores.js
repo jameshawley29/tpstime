@@ -128,7 +128,7 @@ export let periods = [
     "name": "7th Period",
     "time": [
       "12:30",
-      "13:00"
+      "18:00"
     ]
   }
 ]

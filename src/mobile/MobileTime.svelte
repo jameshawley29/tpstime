@@ -78,5 +78,7 @@
         text-align: center;
 
         color: #000080;
+
+        /*text-shadow: 0px 0px 15px #000080;*/
     }
 </style>
