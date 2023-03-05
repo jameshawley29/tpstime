@@ -1,8 +1,17 @@
 <script>
-    let pressed = false
+    import { is_hs } from './stores';
+
+    let is_hs_val;
+
+    is_hs.subscribe((value) => {
+        is_hs_val = value;
+    })
+
+    let pressed = is_hs_val;
     function clicked() {
         pressed = !pressed
     }
+    console.log("VAL NOW IS"+is_hs_val);
 </script>
 
 <div style="{pressed? "transform: translateX(0px)": ""}">
@@ -13,8 +22,8 @@
         <path style="{pressed? "transform: rotate(-45deg) translate(0%, -25%)": ""}" id="Vector3" d="M70.875 53.2875H10.125V55.4625H70.875V53.2875Z" fill="black"/>
         </g>
     </svg>
-    <button class="button">HS</button>
-    <button class="button">MS</button>
+    <button class="button" style="background-color: {is_hs_val? "yellow": "white"}" on:click={() => {is_hs.set(true)}}>HS</button>
+    <button class="button" style="background-color: {is_hs_val? "white": "yellow"}" on:click={() => {is_hs.set(false)}}>MS</button>
 </div>
 
 <style>

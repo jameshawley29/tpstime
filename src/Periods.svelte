@@ -1,20 +1,21 @@
 <script>
     // @ts-nocheck
+        import { current_period } from "./stores.js";
+    
     
         export let period;
         export let i;
-        export let current_period;
     
         let font_size = 1.736
         let font_color = "black"
         let shadow = ""
 
         //HEHRERERERERERERERERERE working with alerts and subscriptions
-
+        current_period.subscribe( (value) => {update(value)})
         
     
-        function update() {
-            if (i == current_period) {
+        function update(val) {
+            if (i == val) {
                 font_size = 6
                 font_color = "white"
                 shadow = "5px 5px 15px rgba(100, 100, 100, 0.3)"
@@ -24,8 +25,8 @@
                 shadow = ""
             }
         }
-        update()
-        setInterval(update,1000)
+        //update()
+        //setInterval(update,1000)
 
     
     </script>

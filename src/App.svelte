@@ -17,10 +17,13 @@
 
 	import { periods, weekSchedule } from './stores'
 
+    let periods_val;   
+
+    periods.subscribe((val) => {periods_val = val});
+
 
 //export let periods;
 
-let current_period = -1;
 
 
 </script>
@@ -32,15 +35,17 @@ let current_period = -1;
     <div id="menu-bar">
         <MenuButton></MenuButton>
     </div>
+    {#key periods_val}
     <div id="periods">
-        {#each periods as period, i}
-        <Period period={period} i={i} bind:current_period={current_period}></Period>
+        {#each periods_val as period, i}
+        <Period period={period} i={i}></Period>
         {/each}
     </div>
 	
     <div id="time-div">
-        <Time {periods} bind:current_period={current_period}></Time>
+        <Time></Time>
     </div>
+    {/key}
 	
     <p id="my-name">James Hawley</p>
 </body>
