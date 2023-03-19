@@ -8,7 +8,6 @@
     })
 
 
-    console.log("VAL NOW IS"+is_hs_val);
 </script>
 
 

@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Test</title>
+	<title>TPS Time</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" />
 	<link
@@ -13,7 +13,7 @@
     import MobileForcast from "./MobileForcast.svelte";
     import MobileButtons from "./MobileButtons.svelte";
 
-    import { periods, weekSchedule } from '../stores';
+    import {weekSchedule } from '../stores';
 
     let weekScheduleVal = ['N', 'N', 'N', 'N', 'N']
 
@@ -23,7 +23,6 @@
 
 
 
-    let current_period = -1;
 </script>
 
 <body>

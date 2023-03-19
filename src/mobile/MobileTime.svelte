@@ -34,9 +34,9 @@
     })
     periods.subscribe((val) =>{ periods_val = val; current_period.set(-1)});
 
-    let time = "5:37"
+    let time = "0:00"
 
-    let interval_id = 0;
+
 
     function updateTime() {
         let stop = 50;
@@ -54,11 +54,10 @@
             }
         }
 
+        console.log(periodVal)
         if (periodVal>=periods_val.length) {
             time = "0:00"
             document.title = "School Over"
-            clearInterval(interval_id)
-            console.log(interval_id)
             display_class_name = ""
         } else {
             let time_till_end = getSecondsTillClass(periods_val[periodVal].time[1]);
@@ -70,9 +69,9 @@
     }
     let display_class_name = ""
 
-    updateTime();
+    //updateTime();
 
-    interval_id = setInterval(updateTime,1000)
+    setInterval(updateTime,1000)
 
 
 

@@ -11,7 +11,7 @@
     function clicked() {
         pressed = !pressed
     }
-    console.log("VAL NOW IS"+is_hs_val);
+
 </script>
 
 <div style="{pressed? "transform: translateX(0px)": ""}">

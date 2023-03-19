@@ -131,7 +131,6 @@ let days = {
 export let current_period = writable(-1);
 
 const stored = localStorage.is_hs;
-console.log("LOCAL STOERSGE: "+stored);
 export let is_hs = writable(stored? stored=="true":true);
 export let periods = writable(days["B"]);
 
@@ -150,6 +149,7 @@ export let weekSchedule = writable(['N', 'N', 'N', 'N', 'N'])
 
 
 function getCrap() {
+  console.log("GETTING CRAP")
 
   let response = fetch(`https://data.mongodb-api.com/app/trinity-schedule-pazfo/endpoint/tpstime_info?is_hs=${is_hs_val}`);
   let obj = response.then(res => {
@@ -176,5 +176,3 @@ function getCrap() {
       weekSchedule.set(lol)
   });
 }
-
-getCrap()
