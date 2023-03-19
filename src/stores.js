@@ -176,3 +176,5 @@ function getCrap() {
       weekSchedule.set(lol)
   });
 }
+
+getCrap()

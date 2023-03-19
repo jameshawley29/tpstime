@@ -7,22 +7,39 @@
         is_hs_val = value;
     })
 
-    function set_hs(val) {
-        is_hs.set(val)
-    }
 
     console.log("VAL NOW IS"+is_hs_val);
 </script>
 
 
 <div>
-    <button on:click={()=>{set_hs(true)}}>HS</button>
-    <button on:click={()=>{set_hs(false)}}>MS</button>
+    <button class="button" style="background-color: {is_hs_val? "yellow": "white"}" on:click={() => {is_hs.set(true)}}>HS</button>
+    <button class="button" style="background-color: {is_hs_val? "white": "yellow"}" on:click={() => {is_hs.set(false)}}>MS</button>
 </div>
 
 
 <style>
     div {
-        display: inline;
+        display: inline-flex;
+    }
+
+    button {
+        width: 70px;
+        height: 40px;
+
+        border-radius: 5%;
+        outline: none;
+        border: none;
+
+        color: #62C6F2;
+        background-color: white;
+
+        font-weight: 700;
+        font-size: 25px;
+
+        text-align: center;
+
+        margin: 10px;
+
     }
 </style>
