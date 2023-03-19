@@ -26,50 +26,69 @@
         });
     }
 
-    export let periods;
-    export let current_period;
+    import {current_period, periods} from '../stores';
+    let periodVal;
+    let periods_val
+    current_period.subscribe(value => {
+        periodVal = value;
+    })
+    periods.subscribe((val) =>{ periods_val = val; current_period.set(-1)});
 
     let time = "5:37"
 
+    let interval_id = 0;
 
     function updateTime() {
         let stop = 50;
 
-        while (current_period<periods.length) {
+        while (periodVal<periods_val.length) {
             //console.log(getSecondsTillClass(periods[start_index]["time"][1]))
-            if(current_period<0 || getSecondsTillClass(periods[current_period]["time"][1])<0) {
-                current_period+=1
+            if(periodVal<0 || getSecondsTillClass(periods_val[periodVal]["time"][1])<0) {
+                current_period.update(n => n +1);
             } else {
                 break
             }
             stop+=1
             if (stop >100) {
-                console.log(current_period)
                 return 1;
             }
         }
 
-        if (current_period>=periods.length) {
+        if (periodVal>=periods_val.length) {
             time = "0:00"
+            document.title = "School Over"
+            clearInterval(interval_id)
+            console.log(interval_id)
+            display_class_name = ""
         } else {
-            let time_till_end = getSecondsTillClass(periods[current_period].time[1]);
+            let time_till_end = getSecondsTillClass(periods_val[periodVal].time[1]);
             time = seconds_to_timestring(time_till_end);
+            document.title =  parseInt(time_till_end/60)+" mins"
+            display_class_name = periods_val[periodVal]["name"]
         }
 
     }
+    let display_class_name = ""
+
     updateTime();
 
-    setInterval(updateTime,100)
+    interval_id = setInterval(updateTime,1000)
+
+
 
 
 </script>
 
+
 <p>
+    {display_class_name}
+</p>
+<p id="time">
     {time}
 </p>
 
 <style>
-    p {
+    p#time {
         font-size: 25vw;
         font-family: Roboto;
         margin: 0;

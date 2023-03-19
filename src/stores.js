@@ -49,14 +49,14 @@ let days = {
         "name": "Sixth Period",
         "time": [
           "13:25",
-          "14:45"
+          "21:20"
         ]
       },
       {
         "name": "Study Period",
         "time": [
-          "14:45",
-          "20:35"
+          "21:25",
+          "22:35"
         ]
       }
     ],
@@ -126,17 +126,53 @@ let days = {
 
 
 
-export let weekSchedule = ["N","B","C","A","A"]
+//export let weekSchedule = ["N","B","C","A","A"]
 
 export let current_period = writable(-1);
 
 const stored = localStorage.is_hs;
 console.log("LOCAL STOERSGE: "+stored);
-export let is_hs = writable(stored? stored:true);
+export let is_hs = writable(stored? stored=="true":true);
 export let periods = writable(days["B"]);
 
+let is_hs_val = true;
+
 is_hs.subscribe((value) => {
+  is_hs_val = value;
+  current_period = writable(-1);
   console.log("is_hs: "+value)
   localStorage.is_hs = value;
-  periods.set(value? days["C"]: days["B"]);
+  getCrap()
+  
 })
+
+export let weekSchedule = writable(['N', 'N', 'N', 'N', 'N'])
+
+
+function getCrap() {
+
+  let response = fetch(`https://data.mongodb-api.com/app/trinity-schedule-pazfo/endpoint/tpstime_info?is_hs=${is_hs_val}`);
+  let obj = response.then(res => {
+          return res.json();
+  });
+  
+  obj.then(res => {
+      console.log(res.day, res.week, res.schedule);
+  
+  
+  
+  
+      //let test_schedule = [{name: "period 2", time: ["19:00","19:50"]}]
+  
+      periods.set(res.schedule);
+  
+      let lol = []
+      for (let i of res.week) {
+        lol.push(i["name"][0])
+      }
+  
+      console.log(lol)
+  
+      weekSchedule.set(lol)
+  });
+}

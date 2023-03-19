@@ -11,8 +11,15 @@
 <script>
     import MobileTime from "./MobileTime.svelte";
     import MobileForcast from "./MobileForcast.svelte";
+    import MobileButtons from "./MobileButtons.svelte";
 
     import { periods, weekSchedule } from '../stores';
+
+    let weekScheduleVal = ['N', 'N', 'N', 'N', 'N']
+
+    weekSchedule.subscribe((val)=> {
+        weekScheduleVal = val
+    })
 
 
 
@@ -21,10 +28,13 @@
 
 <body>
     <div id="forcast">
-        <MobileForcast weekSchedule={weekSchedule}></MobileForcast>
+        <MobileForcast weekSchedule={weekScheduleVal}></MobileForcast>
     </div>
     <div id="time">
-        <MobileTime periods={periods} bind:current_period={current_period}></MobileTime>
+        <MobileTime></MobileTime>
+    </div>
+    <div id="buttons">
+        <MobileButtons></MobileButtons>
     </div>
 </body>
 
@@ -45,6 +55,14 @@
         align-items: center;
 
         padding-top: 1vh;
+    }
+
+    #buttons {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        padding: 10px;
     }
 
     

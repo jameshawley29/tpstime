@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Test</title>
+	<title>TPS Time</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" />
 	<link
@@ -17,6 +17,12 @@
 
 	import { periods, weekSchedule } from './stores'
 
+    let weekScheduleVal = ['N', 'N', 'N', 'N', 'N']
+
+    weekSchedule.subscribe((val)=> {
+        weekScheduleVal = val
+    })
+
     let periods_val;   
 
     periods.subscribe((val) => {periods_val = val});
@@ -30,7 +36,7 @@
 
 <body>
 	<div id="forcast-bar">
-		<Forcast weekSchedule={weekSchedule}></Forcast>
+		<Forcast weekSchedule={weekScheduleVal}></Forcast>
 	</div>
     <div id="menu-bar">
         <MenuButton></MenuButton>

@@ -36,6 +36,8 @@
 
     let time = "5:37"
 
+    let interval_id = 0
+
 
     function updateTime() {
         let stop = 50;
@@ -55,15 +57,18 @@
 
         if (periodVal>=periods_val.length) {
             time = "0:00"
+            document.title = "School Over"
+            clearInterval(interval_id)
         } else {
             let time_till_end = getSecondsTillClass(periods_val[periodVal].time[1]);
             time = seconds_to_timestring(time_till_end);
+            document.title =  parseInt(time_till_end/60)+" mins"
         }
 
     }
     updateTime();
 
-    setInterval(updateTime,1000)
+    interval_id = setInterval(updateTime,1000)
 
 
 </script>

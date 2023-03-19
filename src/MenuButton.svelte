@@ -7,7 +7,7 @@
         is_hs_val = value;
     })
 
-    let pressed = is_hs_val;
+    let pressed = false;
     function clicked() {
         pressed = !pressed
     }
