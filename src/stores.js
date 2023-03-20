@@ -1,6 +1,15 @@
 import { writable } from 'svelte/store'
 
 let days = {
+  "N" : [
+    {
+      "name": "",
+      "time": [
+        "00:00",
+        "00:00"
+      ]
+    }
+  ],
 
   "C" : [
       {
@@ -132,7 +141,7 @@ export let current_period = writable(-1);
 
 const stored = localStorage.is_hs;
 export let is_hs = writable(stored? stored=="true":true);
-export let periods = writable(days["B"]);
+export let periods = writable(days["N"]);
 
 let is_hs_val = true;
 
