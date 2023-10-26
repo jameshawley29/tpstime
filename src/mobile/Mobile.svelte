@@ -23,6 +23,7 @@
     return `rgb(${r},${g},${b},${alpha})`;
 }
 
+
 function update(number) {
     const percent = number/(60)
     let rgb = get_rgb(percent);

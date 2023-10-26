@@ -86,6 +86,7 @@
         text-align: center;
 
         color: rgb(0,0,0,0);
-        -webkit-text-stroke: 0.3vw #000080;
+        -webkit-text-stroke: 0.3vw rgb(0, 0, 0);
+        /* #000080 #ff71f8*/
     }
 </style>
