@@ -69,8 +69,8 @@
 
 
     body {
-        background-color: #C37125;
-        /* #62C6F2 9d38dc*/
+        background-color: #9d38dc;
+        /* #62C6F2 9d38dc  C37125*/
         overflow-x: hidden;
     }
 
