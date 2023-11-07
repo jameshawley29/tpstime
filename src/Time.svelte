@@ -85,8 +85,8 @@
         align-items: center;
         text-align: center;
 
-        color: rgb(0,0,0,0);
-        -webkit-text-stroke: 0.3vw #000000;
-        /* #000080 #ff71f8*/
+        color: rgba(255, 0, 0, 0);
+        -webkit-text-stroke: 0.3vw #000080;
+        /* 0.3vw #000080 #ff71f8*/
     }
 </style>

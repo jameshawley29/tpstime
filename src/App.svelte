@@ -16,6 +16,7 @@
 	import Forcast from './Forcast.svelte';
 
 	import { periods, weekSchedule } from './stores'
+    import ChristmasLights from './ChristmasLights.svelte';
 
     let weekScheduleVal = ['N', 'N', 'N', 'N', 'N']
 
@@ -41,6 +42,7 @@
     <div id="menu-bar">
         <MenuButton></MenuButton>
     </div>
+    <ChristmasLights />
     {#key periods_val}
     <div id="periods">
         {#each periods_val as period, i}
@@ -69,7 +71,7 @@
 
 
     body {
-        background-color: #C37125;
+        background-color: #62C6F2;
         /* #62C6F2 9d38dc  C37125*/
         overflow-x: hidden;
     }
