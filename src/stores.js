@@ -165,7 +165,9 @@ function getCrap() {
   response.catch(thing => {
     console.log("TRINITY IS BLOCKING THIS BRO")
 
-    let res = {
+    let res = []
+
+    if (is_hs_val) {  res = {
       "week": [
         {
           "name": "A1",
@@ -247,7 +249,91 @@ function getCrap() {
           ]
         }
       ]
+    }} else {
+      res = {
+        "week": [
+          {
+            "name": "A1",
+            "date": "10/23/2022"
+          },
+          {
+            "name": "B1",
+            "date": "10/24/2022"
+          },
+          {
+            "name": "C1",
+            "date": "10/25/2022"
+          },
+          {
+            "name": "B1",
+            "date": "10/26/2022"
+          },
+          {
+            "name": "C1",
+            "date": "10/27/2022"
+          }
+        ],
+        "day": "B1",
+        "schedule": [
+          {
+            "name": "Advisory",
+            "time": [
+              "08:00",
+              "08:05"
+            ]
+          },
+          {
+            "name": "1st Period",
+            "time": [
+              "08:10",
+              "09:30"
+            ]
+          },
+          {
+            "name": "Break/Flex",
+            "time": [
+              "09:35",
+              "09:55"
+            ]
+          },
+          {
+            "name": "3rd Period",
+            "time": [
+              "10:00",
+              "11:20"
+            ]
+          },
+          {
+            "name": "MS Lunch",
+            "time": [
+              "11:25",
+              "12:05"
+            ]
+          },
+          {
+            "name": "5th Period",
+            "time": [
+              "12:10",
+              "13:30"
+            ]
+          },
+          {
+            "name": "7th Period",
+            "time": [
+              "13:35",
+              "14:55"
+            ]
+          },
+          {
+            "name": "Study Hall",
+            "time": [
+              "14:55",
+              "15:15"
+            ]
+          }
+        ]}
     }
+  
     
   
   

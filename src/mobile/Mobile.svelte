@@ -194,6 +194,9 @@ let response = fetch(`https://data.mongodb-api.com/app/trinity-schedule-pazfo/en
 
 response.catch(lol => {
 
+    console.log("RANNNNNN")
+    let res = []
+
     if(is_hs){
         res = {
   "week": [
