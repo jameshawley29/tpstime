@@ -161,6 +161,9 @@ function getCrap() {
   console.log("GETTING CRAP")
 
   let response = fetch(`https://data.mongodb-api.com/app/trinity-schedule-pazfo/endpoint/tpstime_info?is_hs=${is_hs_val}`);
+  response.catch(thing => {
+    console.log("TRINITY IS BLOCKING THIS BRO")
+  });
   let obj = response.then(res => {
           return res.json();
   });

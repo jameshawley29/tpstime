@@ -55,7 +55,7 @@
     </div>
     {/key}
 	
-    <p id="my-name">If TPS Time is not working this is due to Trinity's wifi and not TPS Time, This may be on purpose as it is the same for some other websites</p>
+    <p id="my-name">If TPS Time is not working this is due to Trinity's wifi and not TPS Time.</p>
 </body>
 
 <style>
