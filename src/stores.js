@@ -153,8 +153,8 @@ is_hs.subscribe((value) => {
   getCrap()
   
 })
-
-export let weekSchedule = writable(['N', 'N', 'N', 'N', 'N'])
+// Manual
+export let weekSchedule = writable(['A', 'B', 'C', 'B', 'C'])
 
 
 function getCrap() {
@@ -163,6 +163,30 @@ function getCrap() {
   let response = fetch(`https://data.mongodb-api.com/app/trinity-schedule-pazfo/endpoint/tpstime_info?is_hs=${is_hs_val}`);
   response.catch(thing => {
     console.log("TRINITY IS BLOCKING THIS BRO")
+
+    let res = [];
+    res.day = "B1";
+    res.week = ["A", "B", "C", "B", "C"]
+    res.schedule = days.B;
+
+    console.log(res.day, res.week, res.schedule);
+  
+  
+  
+  
+      //let test_schedule = [{name: "period 2", time: ["19:00","19:50"]}]
+  
+      periods.set(res.schedule);
+  
+      let lol = []
+      for (let i of res.week) {
+        lol.push(i["name"][0])
+      }
+  
+      console.log(lol)
+  
+      weekSchedule.set(lol)
+
   });
   let obj = response.then(res => {
           return res.json();
