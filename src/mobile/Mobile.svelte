@@ -191,6 +191,228 @@ changer = []
 
 console.log("re calling: ", is_hs);
 let response = fetch(`https://data.mongodb-api.com/app/trinity-schedule-pazfo/endpoint/tpstime_info?is_hs=${is_hs}`);
+
+response.catch(lol => {
+    let days = {
+  "N" : [
+    {
+      "name": "",
+      "time": [
+        "00:00",
+        "00:00"
+      ]
+    }
+  ],
+
+  "C" : [
+      {
+        "name": "Advisory",
+        "time": [
+          "08:00",
+          "08:20"
+        ]
+      },
+      {
+        "name": "Second Period",
+        "time": [
+          "08:25",
+          "09:45"
+        ]
+      },
+      {
+        "name": "Break/Flex",
+        "time": [
+          "09:50",
+          "10:15"
+        ]
+      },
+      {
+        "name": "Fourth Period",
+        "time": [
+          "10:20",
+          "11:40"
+        ]
+      },
+      {
+        "name": "US Middle Block",
+        "time": [
+          "11:45",
+          "12:35"
+        ]
+      },
+      {
+        "name": "US Lunch",
+        "time": [
+          "12:40",
+          "13:20"
+        ]
+      },
+      {
+        "name": "Sixth Period",
+        "time": [
+          "13:25",
+          "21:20"
+        ]
+      },
+      {
+        "name": "Study Period",
+        "time": [
+          "21:25",
+          "22:35"
+        ]
+      }
+    ],
+
+    "B" : [
+      {
+        "name": "Advisory",
+        "time": [
+          "08:00",
+          "08:05"
+        ]
+      },
+      {
+        "name": "1st Period",
+        "time": [
+          "08:10",
+          "09:30"
+        ]
+      },
+      {
+        "name": "Break/Flex",
+        "time": [
+          "09:35",
+          "09:55"
+        ]
+      },
+      {
+        "name": "3rd Period",
+        "time": [
+          "10:00",
+          "11:20"
+        ]
+      },
+      {
+        "name": "5th Period",
+        "time": [
+          "11:25",
+          "12:45"
+        ]
+      },
+      {
+        "name": "US Lunch",
+        "time": [
+          "12:50",
+          "13:30"
+        ]
+      },
+      {
+        "name": "7th Period",
+        "time": [
+          "13:35",
+          "14:55"
+        ]
+      },
+      {
+        "name": "Study Hall",
+        "time": [
+          "14:55",
+          "15:15"
+        ]
+      }
+    ]}
+
+    let res = {
+  "week": [
+    {
+      "name": "A1",
+      "date": "10/23/2022"
+    },
+    {
+      "name": "B1",
+      "date": "10/24/2022"
+    },
+    {
+      "name": "C1",
+      "date": "10/25/2022"
+    },
+    {
+      "name": "B1",
+      "date": "10/26/2022"
+    },
+    {
+      "name": "C1",
+      "date": "10/27/2022"
+    }
+  ],
+  "day": "B1",
+  "schedule": [
+    {
+      "name": "Advisory",
+      "time": [
+        "08:00",
+        "08:05"
+      ]
+    },
+    {
+      "name": "1st Period",
+      "time": [
+        "08:10",
+        "09:30"
+      ]
+    },
+    {
+      "name": "Break/Flex",
+      "time": [
+        "09:35",
+        "09:55"
+      ]
+    },
+    {
+      "name": "3rd Period",
+      "time": [
+        "10:00",
+        "11:20"
+      ]
+    },
+    {
+      "name": "5th Period",
+      "time": [
+        "11:25",
+        "12:45"
+      ]
+    },
+    {
+      "name": "US Lunch",
+      "time": [
+        "12:50",
+        "13:30"
+      ]
+    },
+    {
+      "name": "7th Period",
+      "time": [
+        "13:35",
+        "14:55"
+      ]
+    },
+    {
+      "name": "Study Hall",
+      "time": [
+        "14:55",
+        "15:15"
+      ]
+    }
+  ]
+};
+
+    set_day(res.day);
+
+    set_week(res.week);
+
+    set_clock(res.schedule);
+})
+
 let obj = response.then(res => {
     return res.json();
 });
@@ -198,6 +420,7 @@ let obj = response.then(res => {
 
 
 obj.then(res => {
+
     console.log(res.day, res.week, res.schedule);
 
     set_day(res.day);

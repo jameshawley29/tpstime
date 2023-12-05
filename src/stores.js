@@ -160,16 +160,95 @@ export let weekSchedule = writable(['A', 'B', 'C', 'B', 'C'])
 function getCrap() {
   console.log("GETTING CRAP")
 
-  let response = fetch(`https://data.mongodb-api.com/app/trinity-schedule-pazfo/endpoint/tpstime_info?is_hs=${is_hs_val}`);
+  //IMPLEMENT IS HS ${is_hs_val}
+  let response = fetch(`https://jsonkeeper.com/b/2ZQ0`);
   response.catch(thing => {
     console.log("TRINITY IS BLOCKING THIS BRO")
 
-    let res = [];
-    res.day = "B1";
-    res.week = ["A", "B", "C", "B", "C"]
-    res.schedule = days.B;
-
-    console.log(res.day, res.week, res.schedule);
+    let res = {
+      "week": [
+        {
+          "name": "A1",
+          "date": "10/23/2022"
+        },
+        {
+          "name": "B1",
+          "date": "10/24/2022"
+        },
+        {
+          "name": "C1",
+          "date": "10/25/2022"
+        },
+        {
+          "name": "B1",
+          "date": "10/26/2022"
+        },
+        {
+          "name": "C1",
+          "date": "10/27/2022"
+        }
+      ],
+      "day": "B1",
+      "schedule": [
+        {
+          "name": "Advisory",
+          "time": [
+            "08:00",
+            "08:05"
+          ]
+        },
+        {
+          "name": "1st Period",
+          "time": [
+            "08:10",
+            "09:30"
+          ]
+        },
+        {
+          "name": "Break/Flex",
+          "time": [
+            "09:35",
+            "09:55"
+          ]
+        },
+        {
+          "name": "3rd Period",
+          "time": [
+            "10:00",
+            "11:20"
+          ]
+        },
+        {
+          "name": "5th Period",
+          "time": [
+            "11:25",
+            "12:45"
+          ]
+        },
+        {
+          "name": "US Lunch",
+          "time": [
+            "12:50",
+            "13:30"
+          ]
+        },
+        {
+          "name": "7th Period",
+          "time": [
+            "13:35",
+            "14:55"
+          ]
+        },
+        {
+          "name": "Study Hall",
+          "time": [
+            "14:55",
+            "15:15"
+          ]
+        }
+      ]
+    }
+    
   
   
   
