@@ -190,7 +190,7 @@ function getCrap() {
           "date": "10/27/2022"
         }
       ],
-      "day": "C1",
+      "day": "B1",
       "schedule": [
         {
           "name": "Advisory",
@@ -200,56 +200,57 @@ function getCrap() {
           ]
         },
         {
-          "name": "2nd Period",
+          "name": "1st Period",
           "time": [
             "08:10",
             "09:30"
           ]
         },
         {
-          "name": "Break/Chapel",
+          "name": "Break/Flex",
           "time": [
             "09:35",
-            "10:20"
+            "09:55"
           ]
         },
         {
-          "name": "4th Period",
+          "name": "3rd Period",
           "time": [
-            "10:25",
-            "11:45"
+            "10:00",
+            "11:20"
           ]
         },
         {
-          "name": "US Long Advisory",
+          "name": "5th Period",
           "time": [
-            "11:50",
-            "12:30"
+            "11:25",
+            "12:45"
           ]
         },
         {
           "name": "US Lunch",
           "time": [
-            "12:35",
-            "13:15"
+            "12:50",
+            "13:30"
           ]
         },
         {
-          "name": "6th Period",
+          "name": "7th Period",
           "time": [
-            "13:20",
-            "14:40"
+            "13:35",
+            "14:55"
           ]
         },
         {
-          "name": "Study Period",
+          "name": "Study Hall",
           "time": [
-            "14:45",
+            "14:55",
             "15:15"
           ]
         }
       ]
-    }} else {
+    } 
+    } else {
       res = {
         "week": [
           {
@@ -273,7 +274,7 @@ function getCrap() {
             "date": "10/27/2022"
           }
         ],
-        "day": "C1",
+        "day": "B1",
         "schedule": [
           {
             "name": "Advisory",
@@ -283,51 +284,51 @@ function getCrap() {
             ]
           },
           {
-            "name": "2nd Period",
+            "name": "1st Period",
             "time": [
               "08:10",
               "09:30"
             ]
           },
           {
-            "name": "Break/Chapel",
+            "name": "Break/Flex",
             "time": [
               "09:35",
-              "10:20"
+              "09:55"
             ]
           },
           {
-            "name": "4th Period",
+            "name": "3rd Period",
             "time": [
-              "10:25",
-              "11:45"
+              "10:00",
+              "11:20"
             ]
           },
           {
             "name": "MS Lunch",
             "time": [
-              "11:50",
-              "12:30"
+              "11:25",
+              "12:05"
             ]
           },
           {
-            "name": "MS Long Advisory",
+            "name": "5th Period",
             "time": [
-              "12:35",
-              "13:15"
+              "12:10",
+              "13:30"
             ]
           },
           {
-            "name": "6th Period",
+            "name": "7th Period",
             "time": [
-              "13:20",
-              "14:40"
+              "13:35",
+              "14:55"
             ]
           },
           {
-            "name": "Study Period",
+            "name": "Study Hall",
             "time": [
-              "14:45",
+              "14:55",
               "15:15"
             ]
           }
