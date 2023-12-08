@@ -335,14 +335,14 @@ response.catch(lol => {
             ]
           },
           {
-            "name": "US Long Advisory",
+            "name": "MS Lunch",
             "time": [
               "11:50",
               "12:30"
             ]
           },
           {
-            "name": "US Lunch",
+            "name": "MS Long Advisory",
             "time": [
               "12:35",
               "13:15"
