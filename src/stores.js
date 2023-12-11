@@ -174,23 +174,23 @@ function getCrap() {
           "date": "10/23/2022"
         },
         {
-          "name": "B1",
+          "name": "A1",
           "date": "10/24/2022"
         },
         {
-          "name": "C1",
+          "name": "A1",
           "date": "10/25/2022"
         },
         {
-          "name": "B1",
+          "name": "A1",
           "date": "10/26/2022"
         },
         {
-          "name": "C1",
+          "name": "A1",
           "date": "10/27/2022"
         }
       ],
-      "day": "C1",
+      "day": "A1",
       "schedule": [
         {
           "name": "Advisory",
@@ -200,35 +200,49 @@ function getCrap() {
           ]
         },
         {
-          "name": "2nd Period",
+          "name": "1st Period",
           "time": [
             "08:10",
-            "09:30"
+            "08:55"
           ]
         },
         {
-          "name": "Break/Chapel",
+          "name": "2nd Period",
           "time": [
-            "09:35",
-            "10:20"
+            "09:00",
+            "09:45"
+          ]
+        },
+        {
+          "name": "Break/Flex",
+          "time": [
+            "09:50",
+            "10:00"
+          ]
+        },
+        {
+          "name": "3rd Period",
+          "time": [
+            "10:05",
+            "10:50"
           ]
         },
         {
           "name": "4th Period",
           "time": [
-            "10:25",
-            "11:45"
+            "10:55",
+            "11:40"
           ]
         },
         {
-          "name": "US Long Advisory",
+          "name": "5th Period",
           "time": [
-            "11:50",
+            "11:45",
             "12:30"
           ]
         },
         {
-          "name": "US Lunch",
+          "name": "US lunch",
           "time": [
             "12:35",
             "13:15"
@@ -238,103 +252,131 @@ function getCrap() {
           "name": "6th Period",
           "time": [
             "13:20",
-            "14:40"
+            "14:05"
           ]
         },
         {
-          "name": "Study Period",
+          "name": "7th Period",
           "time": [
-            "14:45",
-            "15:15"
+            "14:10",
+            "14:55"
+          ]
+        },
+        {
+          "name": "Study Hall",
+          "time": [
+            "14:55",
+            "15:20"
           ]
         }
       ]
-    } 
-    } else {
-      res = {
-        "week": [
-          {
-            "name": "A1",
-            "date": "10/23/2022"
-          },
-          {
-            "name": "B1",
-            "date": "10/24/2022"
-          },
-          {
-            "name": "C1",
-            "date": "10/25/2022"
-          },
-          {
-            "name": "B1",
-            "date": "10/26/2022"
-          },
-          {
-            "name": "C1",
-            "date": "10/27/2022"
-          }
-        ],
-        "day": "C1",
-        "schedule": [
-          {
-            "name": "Advisory",
-            "time": [
-              "08:00",
-              "08:05"
-            ]
-          },
-          {
-            "name": "2nd Period",
-            "time": [
-              "08:10",
-              "09:30"
-            ]
-          },
-          {
-            "name": "Break/Chapel",
-            "time": [
-              "09:35",
-              "10:20"
-            ]
-          },
-          {
-            "name": "4th Period",
-            "time": [
-              "10:25",
-              "11:45"
-            ]
-          },
-          {
-            "name": "MS Lunch",
-            "time": [
-              "11:50",
-              "12:30"
-            ]
-          },
-          {
-            "name": "MS Long Advisory",
-            "time": [
-              "12:35",
-              "13:15"
-            ]
-          },
-          {
-            "name": "6th Period",
-            "time": [
-              "13:20",
-              "14:40"
-            ]
-          },
-          {
-            "name": "Study Period",
-            "time": [
-              "14:45",
-              "15:15"
-            ]
-          }
-        ]
-      }
     }
+        } else {
+          res = {
+      "week": [
+        {
+          "name": "A1",
+          "date": "10/23/2022"
+        },
+        {
+          "name": "A1",
+          "date": "10/24/2022"
+        },
+        {
+          "name": "A1",
+          "date": "10/25/2022"
+        },
+        {
+          "name": "A1",
+          "date": "10/26/2022"
+        },
+        {
+          "name": "A1",
+          "date": "10/27/2022"
+        }
+      ],
+      "day": "A1",
+      "schedule": [
+        {
+          "name": "Advisory",
+          "time": [
+            "08:00",
+            "08:05"
+          ]
+        },
+        {
+          "name": "1st Period",
+          "time": [
+            "08:10",
+            "08:55"
+          ]
+        },
+        {
+          "name": "2nd Period",
+          "time": [
+            "09:00",
+            "09:45"
+          ]
+        },
+        {
+          "name": "Break/Flex",
+          "time": [
+            "09:50",
+            "10:00"
+          ]
+        },
+        {
+          "name": "3rd Period",
+          "time": [
+            "10:05",
+            "10:50"
+          ]
+        },
+        {
+          "name": "4th Period",
+          "time": [
+            "10:55",
+            "11:40"
+          ]
+        },
+        {
+          "name": "MS Lunch",
+          "time": [
+            "11:45",
+            "12:30"
+          ]
+        },
+        {
+          "name": "5th Period",
+          "time": [
+            "12:35",
+            "13:15"
+          ]
+        },
+        {
+          "name": "6th Period",
+          "time": [
+            "13:20",
+            "14:05"
+          ]
+        },
+        {
+          "name": "7th Period",
+          "time": [
+            "14:10",
+            "14:55"
+          ]
+        },
+        {
+          "name": "Study Hall",
+          "time": [
+            "14:55",
+            "15:20"
+          ]
+        }
+      ]
+    }
+        }
   
     
   
