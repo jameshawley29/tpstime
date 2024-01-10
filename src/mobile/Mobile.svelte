@@ -220,7 +220,7 @@ response.catch(lol => {
       "date": "10/27/2022"
     }
   ],
-  "day": "B1",
+  "day": "C1",
   "schedule": [
     {
       "name": "Advisory",
@@ -230,51 +230,51 @@ response.catch(lol => {
       ]
     },
     {
-      "name": "1st Period",
+      "name": "2nd Period",
       "time": [
         "08:10",
         "09:30"
       ]
     },
     {
-      "name": "Break/Flex",
+      "name": "Break/Chapel",
       "time": [
         "09:35",
-        "09:55"
+        "10:20"
       ]
     },
     {
-      "name": "3rd Period",
+      "name": "4th Period",
       "time": [
-        "10:00",
-        "11:20"
+        "10:25",
+        "11:45"
       ]
     },
     {
-      "name": "5th Period",
+      "name": "US Long Advisory",
       "time": [
-        "11:25",
-        "12:45"
+        "11:50",
+        "12:30"
       ]
     },
     {
       "name": "US Lunch",
       "time": [
-        "12:50",
-        "13:30"
+        "12:35",
+        "13:15"
       ]
     },
     {
-      "name": "7th Period",
+      "name": "6th Period",
       "time": [
-        "13:35",
-        "14:55"
+        "13:20",
+        "14:40"
       ]
     },
     {
-      "name": "Study Hall",
+      "name": "Study Period",
       "time": [
-        "14:55",
+        "14:45",
         "15:15"
       ]
     }
@@ -304,7 +304,7 @@ response.catch(lol => {
       "date": "10/27/2022"
     }
   ],
-  "day": "A1",
+  "day": "C1",
   "schedule": [
     {
       "name": "Advisory",
@@ -314,51 +314,51 @@ response.catch(lol => {
       ]
     },
     {
-      "name": "1st Period",
+      "name": "2nd Period",
       "time": [
         "08:10",
         "09:30"
       ]
     },
     {
-      "name": "Break/Flex",
+      "name": "Break/Chapel",
       "time": [
         "09:35",
-        "09:55"
+        "10:20"
       ]
     },
     {
-      "name": "3rd Period",
+      "name": "4th Period",
       "time": [
-        "10:00",
-        "11:20"
+        "10:25",
+        "11:45"
       ]
     },
     {
       "name": "MS Lunch",
       "time": [
-        "11:25",
-        "12:45"
+        "11:50",
+        "12:30"
       ]
     },
     {
-      "name": "5th Lunch",
+      "name": "MS Long Advisory",
       "time": [
-        "12:10",
-        "13:30"
+        "12:35",
+        "13:15"
       ]
     },
     {
-      "name": "7th Period",
+      "name": "6th Period",
       "time": [
-        "13:35",
-        "14:55"
+        "13:20",
+        "14:40"
       ]
     },
     {
-      "name": "Study Hall",
+      "name": "Study Period",
       "time": [
-        "14:55",
+        "14:45",
         "15:15"
       ]
     }
