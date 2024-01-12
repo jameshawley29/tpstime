@@ -196,7 +196,7 @@ console.log("re calling: ", is_hs);
 
     console.log("RANNNNNN")
 
-    if (is_hs) {  res = {
+    res = {
       "week": [
         {
           "name": "A1",
@@ -278,91 +278,6 @@ console.log("re calling: ", is_hs);
           ]
         }
       ]
-    }
-        } else {
-          res = {
-      "week": [
-        {
-          "name": "A1",
-          "date": "10/23/2022"
-        },
-        {
-          "name": "B1",
-          "date": "10/24/2022"
-        },
-        {
-          "name": "C1",
-          "date": "10/25/2022"
-        },
-        {
-          "name": "B1",
-          "date": "10/26/2022"
-        },
-        {
-          "name": "C1",
-          "date": "10/27/2022"
-        }
-      ],
-      "day": "C1",
-      "schedule": [
-        {
-          "name": "Advisory",
-          "time": [
-            "08:00",
-            "08:05"
-          ]
-        },
-        {
-          "name": "2nd Period",
-          "time": [
-            "08:10",
-            "09:30"
-          ]
-        },
-        {
-          "name": "Break/Chapel",
-          "time": [
-            "09:35",
-            "10:20"
-          ]
-        },
-        {
-          "name": "4th Period",
-          "time": [
-            "10:25",
-            "11:45"
-          ]
-        },
-        {
-          "name": "MS Lunch",
-          "time": [
-            "11:50",
-            "12:30"
-          ]
-        },
-        {
-          "name": "MS Long Advisory",
-          "time": [
-            "12:35",
-            "13:15"
-          ]
-        },
-        {
-          "name": "6th Period",
-          "time": [
-            "13:20",
-            "14:40"
-          ]
-        },
-        {
-          "name": "Study Period",
-          "time": [
-            "14:45",
-            "15:15"
-          ]
-        }
-      ]
-    }
     }
     
 
