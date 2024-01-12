@@ -188,14 +188,13 @@ if (is_hs == null) {
 
 changer = []
 
-
+let res = []
 console.log("re calling: ", is_hs);
-let response = fetch(`https://data.mongodb-api.com/app/trinity-schedule-pazfo/endpoint/tpstime_info?is_hs=${is_hs}`);
+//let response = fetch(`https://data.mongodb-api.com/app/trinity-schedule-pazfo/endpoint/tpstime_info?is_hs=${is_hs}`);
 
-response.catch(lol => {
+//response.catch(lol => {
 
     console.log("RANNNNNN")
-    let res = []
 
     if (is_hs_val) {  res = {
       "week": [
@@ -372,7 +371,7 @@ response.catch(lol => {
     set_week(res.week);
 
     set_clock(res.schedule);
-})
+
 
 let obj = response.then(res => {
     return res.json();
