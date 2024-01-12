@@ -196,7 +196,7 @@ console.log("re calling: ", is_hs);
 
     console.log("RANNNNNN")
 
-    if (is_hs_val) {  res = {
+    if (is_hs) {  res = {
       "week": [
         {
           "name": "A1",
