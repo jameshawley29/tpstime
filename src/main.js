@@ -3,8 +3,8 @@ import Mobile from './mobile/Mobile.svelte'
 
 
 
-
-if (window.innerWidth>500) {
+//500
+if (window.innerWidth>50) {
 	console.log("viewing desktop verison")
 	const app = new App({
 		target: document.body,
