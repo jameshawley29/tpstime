@@ -170,23 +170,23 @@ function getCrap() {
     if (is_hs_val) {  res = {
       "week": [
         {
-          "name": "A1",
+          "name": "N",
           "date": "10/23/2022"
         },
         {
-          "name": "B1",
+          "name": "C1",
           "date": "10/24/2022"
         },
         {
-          "name": "C1",
+          "name": "B1",
           "date": "10/25/2022"
         },
         {
-          "name": "B1",
+          "name": "A1",
           "date": "10/26/2022"
         },
         {
-          "name": "C1",
+          "name": "A1",
           "date": "10/27/2022"
         }
       ],
