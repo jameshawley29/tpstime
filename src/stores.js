@@ -190,7 +190,7 @@ function getCrap() {
           "date": "10/27/2022"
         }
       ],
-      "day": "B1",
+      "day": "A1",
       "schedule": [
         {
           "name": "Advisory",
@@ -203,41 +203,62 @@ function getCrap() {
           "name": "1st Period",
           "time": [
             "08:10",
-            "09:30"
+            "08:55"
+          ]
+        },
+        {
+          "name": "2nd Period",
+          "time": [
+            "09:00",
+            "09:45"
           ]
         },
         {
           "name": "Break/Flex",
           "time": [
-            "09:35",
-            "09:55"
+            "09:50",
+            "10:00"
           ]
         },
         {
           "name": "3rd Period",
           "time": [
-            "10:00",
-            "11:20"
+            "10:05",
+            "10:50"
+          ]
+        },
+        {
+          "name": "4th Period",
+          "time": [
+            "10:55",
+            "11:40"
           ]
         },
         {
           "name": "5th Period",
           "time": [
-            "11:25",
-            "12:45"
+            "11:45",
+            "12:30"
           ]
         },
         {
-          "name": "US Lunch",
+          "name": "US lunch",
           "time": [
-            "12:50",
-            "13:30"
+            "12:35",
+            "13:15"
+          ]
+        },
+        {
+          "name": "6th Period",
+          "time": [
+            "13:20",
+            "14:05"
           ]
         },
         {
           "name": "7th Period",
           "time": [
-            "13:35",
+            "14:10",
             "14:55"
           ]
         },
@@ -245,7 +266,7 @@ function getCrap() {
           "name": "Study Hall",
           "time": [
             "14:55",
-            "15:15"
+            "15:20"
           ]
         }
       ]
@@ -274,7 +295,7 @@ function getCrap() {
           "date": "10/27/2022"
         }
       ],
-      "day": "B1",
+      "day": "A1",
       "schedule": [
         {
           "name": "Advisory",
@@ -287,41 +308,62 @@ function getCrap() {
           "name": "1st Period",
           "time": [
             "08:10",
-            "09:30"
+            "08:55"
+          ]
+        },
+        {
+          "name": "2nd Period",
+          "time": [
+            "09:00",
+            "09:45"
           ]
         },
         {
           "name": "Break/Flex",
           "time": [
-            "09:35",
-            "09:55"
+            "09:50",
+            "10:00"
           ]
         },
         {
           "name": "3rd Period",
           "time": [
-            "10:00",
-            "11:20"
+            "10:05",
+            "10:50"
+          ]
+        },
+        {
+          "name": "4th Period",
+          "time": [
+            "10:55",
+            "11:40"
           ]
         },
         {
           "name": "MS Lunch",
           "time": [
-            "11:25",
-            "12:05"
+            "11:45",
+            "12:30"
           ]
         },
         {
           "name": "5th Period",
           "time": [
-            "12:10",
-            "13:30"
+            "12:35",
+            "13:15"
+          ]
+        },
+        {
+          "name": "6th Period",
+          "time": [
+            "13:20",
+            "14:05"
           ]
         },
         {
           "name": "7th Period",
           "time": [
-            "13:35",
+            "14:10",
             "14:55"
           ]
         },
@@ -329,7 +371,7 @@ function getCrap() {
           "name": "Study Hall",
           "time": [
             "14:55",
-            "15:15"
+            "15:20"
           ]
         }
       ]
