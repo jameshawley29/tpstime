@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Kaisei Decol';
+    src: url('../fonts/KaiseiDecol-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'Karla';
+    src: url('../fonts/Karla-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }

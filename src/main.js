@@ -1,21 +1,11 @@
-import App from './App.svelte';
-import Mobile from './mobile/Mobile.svelte'
+import './assets/css/main.css'
 
+import { createApp } from 'vue'
+import { createPinia } from 'pinia'
+import App from './App.vue'
 
+const app = createApp(App)
 
-//500
-if (window.innerWidth>50) {
-	console.log("viewing desktop verison")
-	const app = new App({
-		target: document.body,
-	});
-}
-else {
-	console.log("viewing mobile version")
-	const app = new Mobile({
-		target: document.body
-	})
-}
+app.use(createPinia())
 
-
-export default app;
+app.mount('#app')
