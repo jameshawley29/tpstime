@@ -161,9 +161,6 @@ function getCrap() {
   console.log("GETTING CRAP")
 
   //IMPLEMENT IS HS ${is_hs_val}
-  let response = fetch(`https://jsonke`);
-  response.catch(thing => {
-    console.log("TRINITY IS BLOCKING THIS BRO")
 
     let res = []
 
@@ -327,29 +324,5 @@ function getCrap() {
       console.log(lol)
   
       weekSchedule.set(lol)
-
-  });
-  let obj = response.then(res => {
-          return res.json();
-  });
   
-  obj.then(res => {
-      console.log(res.day, res.week, res.schedule);
-  
-  
-  
-  
-      //let test_schedule = [{name: "period 2", time: ["19:00","19:50"]}]
-  
-      periods.set(res.schedule);
-  
-      let lol = []
-      for (let i of res.week) {
-        lol.push(i["name"][0])
-      }
-  
-      console.log(lol)
-  
-      weekSchedule.set(lol)
-  });
 }
