@@ -161,7 +161,7 @@ function getCrap() {
   console.log("GETTING CRAP")
 
   //IMPLEMENT IS HS ${is_hs_val}
-  let response = fetch(`https://jsonkeeper.com/b/2ZQ0`);
+  let response = fetch(`https://jsonke`);
   response.catch(thing => {
     console.log("TRINITY IS BLOCKING THIS BRO")
 
