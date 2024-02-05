@@ -161,7 +161,7 @@ function getCrap() {
   console.log("GETTING CRAP")
 
   //IMPLEMENT IS HS ${is_hs_val}
-  let response = fetch(`https://jsonke`);
+  let response = fetch(`https://jsonkeeper.com/b/2ZQ0`);
   response.catch(thing => {
     console.log("TRINITY IS BLOCKING THIS BRO")
 
@@ -190,51 +190,86 @@ function getCrap() {
           "date": "10/27/2022"
         }
       ],
-      "day": "C Early Dismisal",
+      "day": "A Day",
       "schedule": [
-  {
-    "name": "Advisory",
-    "time": [
-      "08:00",
-      "08:05"
-    ]
-  },
-  {
-    "name": "2nd Period",
-    "time": [
-      "08:10",
-      "09:30"
-    ]
-  },
-  {
-    "name": "Break",
-    "time": [
-      "09:35",
-      "09:45"
-    ]
-  },
-  {
-    "name": "4th Period",
-    "time": [
-      "09:50",
-      "11:10"
-    ]
-  },
-  {
-    "name": "6th Period",
-    "time": [
-      "11:15",
-      "12:35"
-    ]
-  },
-  {
-    "name": "US Lunch",
-    "time": [
-      "12:40",
-      "01:10"
-    ]
-  },
-]
+    {
+      "name": "Advisory",
+      "time": [
+        "08:00",
+        "08:05"
+      ]
+    },
+    {
+      "name": "1st Period",
+      "time": [
+        "08:10",
+        "08:55"
+      ]
+    },
+    {
+      "name": "2nd Period",
+      "time": [
+        "09:00",
+        "09:45"
+      ]
+    },
+    {
+      "name": "Break/Flex",
+      "time": [
+        "09:50",
+        "10:00"
+      ]
+    },
+    {
+      "name": "3rd Period",
+      "time": [
+        "10:05",
+        "10:50"
+      ]
+    },
+    {
+      "name": "4th Period",
+      "time": [
+        "10:55",
+        "11:40"
+      ]
+    },
+    {
+      "name": "5th Period",
+      "time": [
+        "11:45",
+        "12:30"
+      ]
+    },
+    {
+      "name": "US lunch",
+      "time": [
+        "12:35",
+        "13:15"
+      ]
+    },
+    {
+      "name": "6th Period",
+      "time": [
+        "13:20",
+        "14:05"
+      ]
+    },
+    {
+      "name": "7th Period",
+      "time": [
+        "14:10",
+        "14:55"
+      ]
+    },
+    {
+      "name": "Study Hall",
+      "time": [
+        "14:55",
+        "15:20"
+      ]
+    }
+  ]
 
     }
         } else {
@@ -261,51 +296,86 @@ function getCrap() {
           "date": "10/27/2022"
         }
       ],
-      "day": "C1 Early Dismisal",
+      "day": "A Day",
       "schedule": [
-  {
-    "name": "Advisory",
-    "time": [
-      "08:00",
-      "08:05"
-    ]
-  },
-  {
-    "name": "2nd Period",
-    "time": [
-      "08:10",
-      "09:30"
-    ]
-  },
-  {
-    "name": "Break",
-    "time": [
-      "09:35",
-      "09:45"
-    ]
-  },
-  {
-    "name": "4th Period",
-    "time": [
-      "09:50",
-      "11:10"
-    ]
-  },
-  {
-    "name": "MS Lunch",
-    "time": [
-      "11:15",
-      "11:45"
-    ]
-  },
-  {
-    "name": "MS 6th Period",
-    "time": [
-      "11:50",
-      "01:10"
-    ]
-  }
-]
+    {
+      "name": "Advisory",
+      "time": [
+        "08:00",
+        "08:05"
+      ]
+    },
+    {
+      "name": "1st Period",
+      "time": [
+        "08:10",
+        "08:55"
+      ]
+    },
+    {
+      "name": "2nd Period",
+      "time": [
+        "09:00",
+        "09:45"
+      ]
+    },
+    {
+      "name": "Break/Flex",
+      "time": [
+        "09:50",
+        "10:00"
+      ]
+    },
+    {
+      "name": "3rd Period",
+      "time": [
+        "10:05",
+        "10:50"
+      ]
+    },
+    {
+      "name": "4th Period",
+      "time": [
+        "10:55",
+        "11:40"
+      ]
+    },
+    {
+      "name": "MS Lunch",
+      "time": [
+        "11:45",
+        "12:25"
+      ]
+    },
+    {
+      "name": "5th Period",
+      "time": [
+        "12:30",
+        "13:15"
+      ]
+    },
+    {
+      "name": "6th Period",
+      "time": [
+        "13:20",
+        "14:05"
+      ]
+    },
+    {
+      "name": "7th Period",
+      "time": [
+        "14:10",
+        "14:55"
+      ]
+    },
+    {
+      "name": "Study Hall",
+      "time": [
+        "14:55",
+        "15:20"
+      ]
+    }
+  ]
 
     }
         }
