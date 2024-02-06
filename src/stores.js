@@ -190,7 +190,7 @@ function getCrap() {
           "date": "10/27/2022"
         }
       ],
-      "day": "A Day",
+      "day": "B Day",
       "schedule": [
     {
       "name": "Advisory",
@@ -203,62 +203,41 @@ function getCrap() {
       "name": "1st Period",
       "time": [
         "08:10",
-        "08:55"
-      ]
-    },
-    {
-      "name": "2nd Period",
-      "time": [
-        "09:00",
-        "09:45"
+        "09:30"
       ]
     },
     {
       "name": "Break/Flex",
       "time": [
-        "09:50",
-        "10:00"
+        "09:35",
+        "09:55"
       ]
     },
     {
       "name": "3rd Period",
       "time": [
-        "10:05",
-        "10:50"
-      ]
-    },
-    {
-      "name": "4th Period",
-      "time": [
-        "10:55",
-        "11:40"
+        "10:00",
+        "11:20"
       ]
     },
     {
       "name": "5th Period",
       "time": [
-        "11:45",
-        "12:30"
+        "11:25",
+        "12:45"
       ]
     },
     {
-      "name": "US lunch",
+      "name": "US Lunch",
       "time": [
-        "12:35",
-        "13:15"
-      ]
-    },
-    {
-      "name": "6th Period",
-      "time": [
-        "13:20",
-        "14:05"
+        "12:50",
+        "13:30"
       ]
     },
     {
       "name": "7th Period",
       "time": [
-        "14:10",
+        "13:35",
         "14:55"
       ]
     },
@@ -266,7 +245,7 @@ function getCrap() {
       "name": "Study Hall",
       "time": [
         "14:55",
-        "15:20"
+        "15:15"
       ]
     }
   ]
@@ -296,7 +275,7 @@ function getCrap() {
           "date": "10/27/2022"
         }
       ],
-      "day": "A Day",
+      "day": "B Day",
       "schedule": [
     {
       "name": "Advisory",
@@ -309,62 +288,41 @@ function getCrap() {
       "name": "1st Period",
       "time": [
         "08:10",
-        "08:55"
-      ]
-    },
-    {
-      "name": "2nd Period",
-      "time": [
-        "09:00",
-        "09:45"
+        "09:30"
       ]
     },
     {
       "name": "Break/Flex",
       "time": [
-        "09:50",
-        "10:00"
+        "09:35",
+        "09:55"
       ]
     },
     {
       "name": "3rd Period",
       "time": [
-        "10:05",
-        "10:50"
-      ]
-    },
-    {
-      "name": "4th Period",
-      "time": [
-        "10:55",
-        "11:40"
+        "10:00",
+        "11:20"
       ]
     },
     {
       "name": "MS Lunch",
       "time": [
-        "11:45",
-        "12:25"
+        "11:25",
+        "12:05"
       ]
     },
     {
       "name": "5th Period",
       "time": [
-        "12:30",
-        "13:15"
-      ]
-    },
-    {
-      "name": "6th Period",
-      "time": [
-        "13:20",
-        "14:05"
+        "12:10",
+        "13:30"
       ]
     },
     {
       "name": "7th Period",
       "time": [
-        "14:10",
+        "13:35",
         "14:55"
       ]
     },
@@ -372,7 +330,7 @@ function getCrap() {
       "name": "Study Hall",
       "time": [
         "14:55",
-        "15:20"
+        "15:15"
       ]
     }
   ]
