@@ -23,7 +23,7 @@ export const aSchedule = [
   new ClassPeriod("Physical Education", "13:25", "14:10"),
   new ClassPeriod("Art", "14:15", "15:00"),
   new ClassPeriod("Elective", "15:05", "16:00"),
-  new ClassPeriod("Dismissal", "21:50", "23:00"),
+  new ClassPeriod("Dismissal", "21:50", "23:59"),
 ];
 
 export const bSchedule = [
