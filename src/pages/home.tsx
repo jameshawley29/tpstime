@@ -1,0 +1,30 @@
+import Clock from "../components/clock";
+import { aSchedule, bSchedule, cSchedule } from "../types/schedule";
+import Weekdays from "../components/weekdays";
+import Signature from "../components/signature";
+import { WeeklySchedule } from "../types/weekTypes";
+import { getTodayIndex } from "../utils/utils";
+
+function Home() {
+  const ADay = { title: "A", schedule: aSchedule };
+  const BDay = { title: "B", schedule: bSchedule };
+  const CDAY = { title: "C", schedule: cSchedule };
+
+  const thisWeek: WeeklySchedule = [BDay, CDAY, BDay, CDAY, ADay];
+
+  return (
+    <>
+      <div className="absolute justify-center flex w-full p-8 bg-white dark:bg-black">
+        <Weekdays weeklySchedule={thisWeek} todayIndex={getTodayIndex()} />
+      </div>
+      <div className="p-8 min-h-screen flex flex-col items-center justify-center bg-white dark:bg-black">
+        <Clock schedule={thisWeek[getTodayIndex()].schedule} />
+      </div>
+      <div className="absolute bottom-3 right-3 text-gray-400">
+        <Signature />
+      </div>
+    </>
+  );
+}
+
+export default Home;
