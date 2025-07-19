@@ -13,6 +13,8 @@ const Schedule: React.FC<ScheduleProps> = ({ schedule }) => {
 
   const [status, setStatus] = useState(() => getScheduleStatus(schedule));
 
+  const [highlightNext, setHighlightNext] = useState(false);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setStatus(getScheduleStatus(schedule));
@@ -21,6 +23,14 @@ const Schedule: React.FC<ScheduleProps> = ({ schedule }) => {
     return () => clearInterval(interval);
   }, [schedule]);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setHighlightNext((prev) => !prev);
+    }, 1000); // every 1s, toggle highlight
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="w-full">
       <h2 className="text-7xl py-8">{formattedDate}</h2>
@@ -28,9 +38,13 @@ const Schedule: React.FC<ScheduleProps> = ({ schedule }) => {
         {schedule?.map((period) => (
           <div
             key={period.name}
-            className={`flex flex-row justify-between md:text-5xl py-2 ${
-              period.name === status.currentPeriod?.name
+            className={`flex flex-row justify-between md:text-5xl py-2 transition-colors duration-500 ease-in-out ${
+              status.currentPeriod?.name === period.name
                 ? "text-inherit"
+                : status.nextPeriod?.name === period.name
+                ? highlightNext
+                  ? "text-inherit"
+                  : "text-gray-400 dark:text-gray-600"
                 : "text-gray-400 dark:text-gray-600"
             }`}
           >
