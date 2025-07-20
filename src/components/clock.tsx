@@ -29,7 +29,7 @@ const Clock: React.FC<ClockProps> = ({ schedule }) => {
       ) : (
         <p
           className={`text-[25vw] md:text-[20vw] w-full font-bold text-center leading-none ${
-            !status.currentPeriod ? "text-green-500 dark:text-inherit" : ""
+            !status.currentPeriod ? "text-blue-500 dark:text-inherit" : ""
           }`}
         >
           {leftSide}:{rightSide}

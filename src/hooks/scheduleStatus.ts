@@ -41,3 +41,38 @@ export function getScheduleStatus(schedule: ClassPeriod[]): ScheduleStatus {
     isDayOver: true,
   };
 }
+
+type ActivePeriodInfo = {
+  period: ClassPeriod | undefined;
+  isCurrentlyActive: boolean;
+  isBetweenClasses: boolean;
+};
+
+export function getActivePeriod(schedule: ClassPeriod[]): ActivePeriodInfo {
+  const status = getScheduleStatus(schedule);
+
+  // If we're currently in a class
+  if (status.currentPeriod && !status.isDayOver) {
+    return {
+      period: status.currentPeriod,
+      isCurrentlyActive: true,
+      isBetweenClasses: false,
+    };
+  }
+
+  // If we're between classes
+  if (!status.currentPeriod && status.nextPeriod) {
+    return {
+      period: status.nextPeriod,
+      isCurrentlyActive: false,
+      isBetweenClasses: true,
+    };
+  }
+
+  // Day is over or no classes
+  return {
+    period: undefined,
+    isCurrentlyActive: false,
+    isBetweenClasses: false,
+  };
+}

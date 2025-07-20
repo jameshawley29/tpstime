@@ -42,7 +42,7 @@ export const bSchedule = [
 
 export const cSchedule = [
   new ClassPeriod("Homeroom", "09:00", "09:05"),
-  new ClassPeriod("Science", "09:10", "09:55"),
+  new ClassPeriod("Science", "09:10", "09:40"),
   new ClassPeriod("Math", "10:00", "10:45"),
   new ClassPeriod("English", "10:50", "11:35"),
   new ClassPeriod("Lunch", "11:40", "12:25"),
