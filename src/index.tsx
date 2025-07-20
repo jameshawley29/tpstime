@@ -1,6 +1,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client"; // React 18 entry point
 import "./index.css";
+import "./styles/themes.css";
 
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
@@ -9,6 +10,7 @@ import {
   useAuth,
   RedirectToSignIn,
 } from "@clerk/clerk-react";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
 const PUBLISHABLE_KEY = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
 if (!PUBLISHABLE_KEY) throw new Error("Missing Publishable Key");
@@ -23,7 +25,7 @@ function AppWithAuth() {
 
   if (!isLoaded) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-white dark:bg-black text-purple-600 dark:text-stone-50">
+      <div className="min-h-screen flex items-center justify-center bg-background text-primary">
         <div className="text-2xl">Loading...</div>
       </div>
     );
@@ -39,7 +41,9 @@ function AppWithAuth() {
 root.render(
   <React.StrictMode>
     <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
-      <AppWithAuth />
+      <ThemeProvider>
+        <AppWithAuth />
+      </ThemeProvider>
     </ClerkProvider>
   </React.StrictMode>
 );

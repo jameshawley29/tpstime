@@ -34,7 +34,7 @@ const Schedule: React.FC<ScheduleProps> = ({ schedule }) => {
 
   return (
     <div className="w-full">
-      <h2 className="text-7xl py-8">{formattedDate}</h2>
+      <h2 className="text-7xl py-8 text-text">{formattedDate}</h2>
       <div>
         {schedule?.map((period) => {
           const isActivePeriod = activePeriodInfo.period?.name === period.name;
@@ -48,10 +48,10 @@ const Schedule: React.FC<ScheduleProps> = ({ schedule }) => {
                 isActivePeriod
                   ? shouldBlink
                     ? highlightNext
-                      ? "text-inherit"
-                      : "text-gray-400 dark:text-gray-600"
-                    : "text-inherit"
-                  : "text-gray-400 dark:text-gray-600"
+                      ? "text-primary"
+                      : "text-text-secondary"
+                    : "text-primary"
+                  : "text-text-secondary"
               }`}
             >
               <h3 className="text-xl md:text-5xl">{period.name}</h3>

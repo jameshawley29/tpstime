@@ -25,12 +25,10 @@ const Clock: React.FC<ClockProps> = ({ schedule }) => {
       <p className="text-lg md:text-3xl pl-3">{status.currentPeriod?.name}</p>
 
       {status.isDayOver ? (
-        <p className="text-red-500">Schedule has ended for the day.</p>
+        <p className="text-error">Schedule has ended for the day.</p>
       ) : (
         <p
-          className={`text-[25vw] md:text-[20vw] w-full font-bold text-center leading-none ${
-            !status.currentPeriod ? "text-blue-500 dark:text-inherit" : ""
-          }`}
+          className={`text-[25vw] md:text-[20vw] w-full font-bold text-center leading-none text-primary`}
         >
           {leftSide}:{rightSide}
         </p>
