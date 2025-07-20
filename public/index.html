@@ -26,6 +26,22 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>TPSTIME</title>
+    <script>
+      function updateThemeColor() {
+        const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const themeColorMeta = document.getElementById('theme-color');
+        
+        if (isDark) {
+          themeColorMeta.setAttribute('content', '#201f23');
+        } else {
+          themeColorMeta.setAttribute('content', '#ffffff');
+        }
+      }
+      
+      updateThemeColor();
+      
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateThemeColor);
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
