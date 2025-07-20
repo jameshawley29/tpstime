@@ -1,4 +1,37 @@
-# Getting Started with Create React App
+# TPSTime - School Schedule Tracker
+
+TPSTime is a React-based web application that helps students track their school schedule in real-time. The app displays the current class period, time remaining, and provides an overview of the daily schedule.
+
+## How It Works
+
+### Schedule Display
+- Shows a **live clock** that updates every second with the current time and class period status
+- Displays the **current class period** name and time remaining until the next period
+- Provides a **full schedule view** showing all class periods for the day
+- Features **highlighted current period** for easy identification
+
+### Schedule Types
+The app supports three different schedule types:
+- **A Day Schedule** - Full class schedule
+- **B Day Schedule** - Alternate class schedule  
+- **C Day Schedule** - Special schedule (e.g., early release, assembly days)
+
+### Smart Time Management
+- **Automatic period detection** - knows which class period is currently active
+- **Countdown timers** - shows time remaining in current period or until next period starts
+- **Weekend/holiday handling** - displays appropriate message when no schedule is active
+- **Real-time updates** - refreshes every second to keep information current
+
+### User Features
+- **Authentication** - Secure login/logout using Clerk authentication
+- **Settings page** - User account management and preferences
+- **Dark mode support** - Automatically adapts to system theme preferences
+- **Responsive design** - Works on desktop and mobile devices
+
+### Navigation
+- **Home page** (`/`) - Main schedule view with live updates
+- **Settings page** (`/settings`) - User account information and logout option
+- Smooth navigation between pages using React Router
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
