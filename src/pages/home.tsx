@@ -13,7 +13,7 @@ function Home() {
   const BDay = { title: "B", schedule: bSchedule };
   const CDAY = { title: "C", schedule: cSchedule };
 
-  const thisWeek: WeeklySchedule = [BDay, CDAY, BDay, CDAY, ADay];
+  const thisWeek: WeeklySchedule = [BDay, ADay, BDay, CDAY, ADay];
 
   return (
     <>

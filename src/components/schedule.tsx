@@ -34,7 +34,7 @@ const Schedule: React.FC<ScheduleProps> = ({ schedule }) => {
 
   return (
     <div className="w-full">
-      <h2 className="text-7xl py-8 text-text">{formattedDate}</h2>
+      <h2 className="text-4xl md:text-7xl py-8 text-text">{formattedDate}</h2>
       <div>
         {schedule?.map((period) => {
           const isActivePeriod = activePeriodInfo.period?.name === period.name;
