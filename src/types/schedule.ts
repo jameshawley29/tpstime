@@ -15,14 +15,14 @@ export const defaultSchedule = [
 
 export const aSchedule = [
   new ClassPeriod("Homeroom", "09:00", "09:10"),
-  new ClassPeriod("Math", "09:15", "10:00"),
-  new ClassPeriod("Science", "10:05", "10:50"),
-  new ClassPeriod("English", "10:55", "11:40"),
+  new ClassPeriod("1", "09:15", "10:00", 1),
+  new ClassPeriod("2", "10:05", "10:50", 2),
+  new ClassPeriod("3", "10:55", "11:40", 3),
   new ClassPeriod("Lunch", "11:45", "12:30"),
-  new ClassPeriod("Social Studies", "12:35", "13:20"),
-  new ClassPeriod("Physical Education", "13:25", "14:10"),
-  new ClassPeriod("Art", "14:15", "15:00"),
-  new ClassPeriod("Elective", "15:05", "16:00"),
+  new ClassPeriod("4", "12:35", "13:20", 4),
+  new ClassPeriod("5", "13:25", "14:10", 5),
+  new ClassPeriod("6", "14:15", "15:00", 6),
+  new ClassPeriod("7", "15:05", "16:00", 7),
   new ClassPeriod("Dismissal", "21:50", "23:20"),
   new ClassPeriod("Leave", "23:00", "23:59"),
 ];

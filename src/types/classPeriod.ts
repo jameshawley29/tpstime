@@ -2,11 +2,13 @@ export class ClassPeriod {
   name: string;
   start: string; // "HH:mm"
   end: string; // "HH:mm"
+  period?: number;
 
-  constructor(name: string, start: string, end: string) {
+  constructor(name: string, start: string, end: string, period?: number) {
     this.name = name;
     this.start = start;
     this.end = end;
+    this.period = period;
   }
 
   getStartUnix(): number {
@@ -19,6 +21,10 @@ export class ClassPeriod {
 
   getDurationSeconds(): number {
     return this.getEndUnix() - this.getStartUnix();
+  }
+
+  getPeriod(): number | undefined {
+    return this.period;
   }
 
   private timeStringToUnix(time: string): number {

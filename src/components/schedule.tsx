@@ -36,14 +36,14 @@ const Schedule: React.FC<ScheduleProps> = ({ schedule }) => {
     <div className="w-full">
       <h2 className="text-4xl md:text-7xl py-8 text-text">{formattedDate}</h2>
       <div>
-        {schedule?.map((period) => {
+        {schedule?.map((period, index) => {
           const isActivePeriod = activePeriodInfo.period?.name === period.name;
           const shouldBlink =
             isActivePeriod && activePeriodInfo.isBetweenClasses;
 
           return (
             <div
-              key={period.name}
+              key={`${period.name}-${period.start}-${index}`}
               className={`flex flex-row justify-between md:text-5xl py-2 transition-colors duration-500 ease-in-out ${
                 isActivePeriod
                   ? shouldBlink

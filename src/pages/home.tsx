@@ -1,19 +1,66 @@
 import Clock from "../components/clock";
+import ClockDescription from "../components/clockDescription";
 import { aSchedule, bSchedule, cSchedule } from "../types/schedule";
 import Weekdays from "../components/weekdays";
 import Signature from "../components/signature";
 import { WeeklySchedule } from "../types/weekTypes";
-import { getTodayIndex } from "../utils/utils";
+import { getTodayIndex, mapScheduleWithClassNames } from "../utils/utils";
 import Schedule from "../components/schedule";
 import { useNavigate } from "react-router-dom";
+import { ClassName } from "../types/className";
+import { useSchedule } from "../hooks/useSchedule";
+import { useMemo } from "react";
 
 function Home() {
   const navigate = useNavigate();
+  const { schedule, loading } = useSchedule();
+
   const ADay = { title: "A", schedule: aSchedule };
   const BDay = { title: "B", schedule: bSchedule };
   const CDAY = { title: "C", schedule: cSchedule };
 
-  const thisWeek: WeeklySchedule = [BDay, ADay, BDay, CDAY, ADay];
+  const defaultClassNames: ClassName[] = [
+    { name: "Period 1", period: 1 },
+    { name: "Period 2", period: 2 },
+    { name: "Period 3", period: 3 },
+    { name: "Period 4", period: 4 },
+    { name: "Period 5", period: 5 },
+    { name: "Period 6", period: 6 },
+    { name: "Period 7", period: 7 },
+  ];
+
+  const classNames: ClassName[] = useMemo(() => {
+    if (
+      loading ||
+      !schedule ||
+      !Array.isArray(schedule) ||
+      schedule.length === 0
+    ) {
+      return defaultClassNames;
+    }
+
+    const dbClassNames: ClassName[] = schedule.map((item: any) => ({
+      name: item.subject || `Period ${item.period}`,
+      period: item.period,
+    }));
+
+    const periodMap = new Map<number, string>();
+    dbClassNames.forEach((className) => {
+      if (className.period) {
+        periodMap.set(
+          className.period,
+          className.name || `Period ${className.period}`
+        );
+      }
+    });
+
+    return defaultClassNames.map((defaultClass) => ({
+      name: periodMap.get(defaultClass.period!) || defaultClass.name,
+      period: defaultClass.period,
+    }));
+  }, [schedule, loading]);
+
+  const thisWeek: WeeklySchedule = [ADay, ADay, BDay, CDAY, ADay];
 
   return (
     <>
@@ -30,11 +77,23 @@ function Home() {
                 todayIndex={getTodayIndex()}
               />
             </div>
-            <div className="p-8 min-h-screen flex flex-col items-center justify-center bg-background">
-              <Clock schedule={thisWeek[getTodayIndex()].schedule} />
+            <div className="min-h-screen flex items-center justify-center bg-background p-8">
+              <div className="flex flex-col items-center sm:items-start w-fit">
+                <div className="md:pl-4 pl-2 md:mb-[-3%]">
+                  <ClockDescription
+                    schedule={thisWeek[getTodayIndex()].schedule}
+                  />
+                </div>
+                <Clock schedule={thisWeek[getTodayIndex()].schedule} />
+              </div>
             </div>
             <div className="w-full p-8 pt-0 mt-4 bg-background justify-center flex">
-              <Schedule schedule={thisWeek[getTodayIndex()].schedule} />
+              <Schedule
+                schedule={mapScheduleWithClassNames(
+                  thisWeek[getTodayIndex()].schedule,
+                  classNames
+                )}
+              />
             </div>
             <div className="py-10 md:py-0"></div>
             <section className="w-full flex justify-between">

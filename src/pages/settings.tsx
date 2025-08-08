@@ -1,10 +1,13 @@
 import { useUser } from "@clerk/clerk-react";
 import { useNavigate } from "react-router-dom";
 import LogButton from "../components/logButton";
+import ScheduleEditor from "../components/ScheduleEditor";
 
 function Settings() {
   const { user, isSignedIn } = useUser();
   const navigate = useNavigate();
+
+  console.log("User:", user);
 
   return (
     <div className="text-primary bg-background min-h-screen">
@@ -42,6 +45,8 @@ function Settings() {
               </p>
             </div>
           )}
+
+          <ScheduleEditor />
 
           <div className="flex justify-center">
             <LogButton />
