@@ -80,11 +80,21 @@ function Home() {
             <div className="min-h-screen flex items-center justify-center bg-background p-8">
               <div className="flex flex-col items-center sm:items-start w-fit">
                 <div className="md:pl-4 pl-2 md:mb-[-3%]">
+                  {/* Pass the mapped schedule with custom period names, not the raw schedule */}
                   <ClockDescription
-                    schedule={thisWeek[getTodayIndex()].schedule}
+                    schedule={mapScheduleWithClassNames(
+                      thisWeek[getTodayIndex()].schedule,
+                      classNames
+                    )}
                   />
                 </div>
-                <Clock schedule={thisWeek[getTodayIndex()].schedule} />
+                {/* Pass the mapped schedule with custom period names for consistency */}
+                <Clock 
+                  schedule={mapScheduleWithClassNames(
+                    thisWeek[getTodayIndex()].schedule,
+                    classNames
+                  )} 
+                />
               </div>
             </div>
             <div className="w-full p-8 pt-0 mt-4 bg-background justify-center flex">

@@ -36,6 +36,9 @@ const Schedule: React.FC<ScheduleProps> = ({ schedule }) => {
     <div className="w-full">
       <h2 className="text-4xl md:text-7xl py-8 text-text">{formattedDate}</h2>
       <div>
+        {/* Flaw in the code below: it is computing the current class based on if
+        two strings are the same, it should be an index based system as to not
+        have future errors */}
         {schedule?.map((period, index) => {
           const isActivePeriod = activePeriodInfo.period?.name === period.name;
           const shouldBlink =
