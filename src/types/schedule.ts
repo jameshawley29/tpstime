@@ -55,27 +55,33 @@ export const cSchedule = [
 
 // Grade-specific schedules - these can be easily modified as variables
 export const middleSchoolSchedule = [
-  new ClassPeriod("Homeroom", "08:30", "08:45"),
-  new ClassPeriod("Math", "08:50", "09:35", 1),
-  new ClassPeriod("English", "09:40", "10:25", 2),
-  new ClassPeriod("Science", "10:30", "11:15", 3),
-  new ClassPeriod("Social Studies", "11:20", "12:05", 4),
-  new ClassPeriod("Lunch", "12:05", "12:50"),
-  new ClassPeriod("Physical Education", "12:55", "13:40", 5),
-  new ClassPeriod("Art/Music", "13:45", "14:30", 6),
-  new ClassPeriod("Study Hall", "14:35", "15:20", 7),
-  new ClassPeriod("Dismissal", "15:20", "15:30"),
+  new ClassPeriod("Advisory", "08:00", "08:10"),
+  new ClassPeriod("1st Period", "08:15", "08:50", 1),
+  new ClassPeriod("2nd Period", "08:55", "09:30", 2),
+  new ClassPeriod("Break/MS Assembly", "09:35", "10:00"),
+  new ClassPeriod("3rd Period", "10:05", "10:40", 3),
+  new ClassPeriod("4th Period", "10:45", "11:20", 4),
+  new ClassPeriod("Lunch", "11:25", "12:05"),
+  new ClassPeriod("5th Period", "12:10", "12:50", 5),
+  new ClassPeriod("6th Period", "12:55", "13:30", 6),
+  new ClassPeriod("7th Period", "13:35", "14:10", 7),
+  new ClassPeriod("Advisory/Senior Grade Meeting Auditorium", "14:15", "14:55"),
 ];
 
 export const highSchoolSchedule = [
-  new ClassPeriod("Homeroom", "08:15", "08:25"),
-  new ClassPeriod("Period 1", "08:30", "09:20", 1),
-  new ClassPeriod("Period 2", "09:25", "10:15", 2),
-  new ClassPeriod("Period 3", "10:20", "11:10", 3),
-  new ClassPeriod("Period 4", "11:15", "12:05", 4),
-  new ClassPeriod("Lunch", "12:05", "12:55"),
-  new ClassPeriod("Period 5", "13:00", "13:50", 5),
-  new ClassPeriod("Period 6", "13:55", "14:45", 6),
-  new ClassPeriod("Period 7", "14:50", "15:40", 7),
-  new ClassPeriod("Dismissal", "15:40", "15:50"),
+  new ClassPeriod("Advisory", "08:00", "08:10"),
+  new ClassPeriod("1st Period", "08:15", "08:50", 1),
+  new ClassPeriod("2nd Period", "08:55", "09:30", 2),
+  new ClassPeriod("Break/MS Assembly", "09:35", "10:00"),
+  new ClassPeriod("3rd Period", "10:05", "10:40", 3),
+  new ClassPeriod("4th Period", "10:45", "11:20", 4),
+  new ClassPeriod("5th Period", "11:25", "12:05", 5),
+  new ClassPeriod("Lunch", "12:10", "12:50"),
+  new ClassPeriod("6th Period", "12:55", "13:30", 6),
+  new ClassPeriod("7th Period", "13:35", "14:10", 7),
+  new ClassPeriod(
+    "MS Advisory/Senior Grade Meeting Auditorium",
+    "14:15",
+    "14:55"
+  ),
 ];
