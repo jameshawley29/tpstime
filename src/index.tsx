@@ -5,13 +5,7 @@ import "./styles/themes.css";
 
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import {
-  ClerkProvider,
-  useAuth,
-  RedirectToSignIn,
-  useUser, // NEW
-  useClerk, // NEW
-} from "@clerk/clerk-react";
+import { ClerkProvider, useAuth, RedirectToSignIn } from "@clerk/clerk-react";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
 const PUBLISHABLE_KEY = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
