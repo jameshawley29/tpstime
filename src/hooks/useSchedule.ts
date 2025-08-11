@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import { useUser } from "@clerk/clerk-react";
-import React from "react";
 
 interface UseScheduleReturn {
   schedule: any;
@@ -10,23 +8,21 @@ interface UseScheduleReturn {
 }
 
 export function useSchedule(): UseScheduleReturn {
-  const { user } = useUser();
   const [schedule, setSchedule] = useState<any>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3001";
+  const userId = "default-user";
 
   console.log("API_URL:", API_URL);
 
   const fetchSchedule = async () => {
-    if (!user?.id) return;
-
     setLoading(true);
     setError(null);
 
     try {
-      const response = await fetch(`${API_URL}/schedule/${user.id}`);
+      const response = await fetch(`${API_URL}/schedule/${userId}`);
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -62,7 +58,7 @@ export function useSchedule(): UseScheduleReturn {
 
   useEffect(() => {
     fetchSchedule();
-  }, [user?.id]);
+  }, [userId]);
 
   return {
     schedule,

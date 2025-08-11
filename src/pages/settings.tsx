@@ -1,13 +1,9 @@
-import { useUser } from "@clerk/clerk-react";
 import { useNavigate } from "react-router-dom";
 import LogButton from "../components/logButton";
 import GradeSelector from "../components/GradeSelector";
 
 function Settings() {
-  const { user, isSignedIn } = useUser();
   const navigate = useNavigate();
-
-  console.log("User:", user);
 
   return (
     <div className="text-primary bg-background min-h-screen">
@@ -36,17 +32,6 @@ function Settings() {
 
         <div className="w-full max-w-md space-y-6">
           <GradeSelector />
-
-          {isSignedIn && user && (
-            <div className="border border-primary p-4 rounded-lg">
-              <h2 className="text-lg font-semibold mb-2">
-                Account Information
-              </h2>
-              <p className="text-secondary">
-                Email: {user.primaryEmailAddress?.emailAddress}
-              </p>
-            </div>
-          )}
 
           <div className="flex justify-center">
             <LogButton />
