@@ -12,11 +12,10 @@ export const aSchedule = [
   new ClassPeriod("6th Period", "13:25", "14:10"),
   new ClassPeriod("7th Period", "14:15", "15:00"),
   new ClassPeriod("Study Period", "15:00", "15:20"),
-  new ClassPeriod("Leave / Athletics", "15:20", "23:59"),
 ];
 
 /*export const aSchedule = [
-  new ClassPeriod("Homeroom", "09:00", "09:10"),
+  new ClassPeriod("Advisory", "09:00", "09:10"),
   new ClassPeriod("1st Period", "09:15", "10:00", 1),
   new ClassPeriod("2", "10:05", "10:50", 2),
   new ClassPeriod("3", "10:55", "11:40", 3),
@@ -30,27 +29,24 @@ export const aSchedule = [
 ];
 //*/
 export const bSchedule = [
-  new ClassPeriod("Homeroom", "09:00", "09:20"),
-  new ClassPeriod("English", "09:25", "10:10"),
-  new ClassPeriod("Math", "10:15", "11:00"),
-  new ClassPeriod("Science", "11:05", "11:50"),
-  new ClassPeriod("Lunch", "11:55", "12:40"),
-  new ClassPeriod("Art", "12:45", "13:30"),
-  new ClassPeriod("Social Studies", "13:35", "14:20"),
-  new ClassPeriod("Physical Education", "14:25", "15:10"),
-  new ClassPeriod("Elective", "15:15", "16:00"),
-  new ClassPeriod("Dismissal", "21:50", "22:00"),
+  new ClassPeriod("Advisory", "08:00", "08:10"),
+  new ClassPeriod("Period 1", "09:25", "09:30"),
+  new ClassPeriod("Break", "09:35", "09:55"),
+  new ClassPeriod("Period 3", "10:00", "11:20"),
+  new ClassPeriod("Period 5", "11:25", "12:45"),
+  new ClassPeriod("US Lunch", "12:50", "13:30"),
+  new ClassPeriod("Period 7", "13:35", "14:55"),
+  new ClassPeriod("Study Period", "15:00", "15:20"),
 ];
 
 export const cSchedule = [
-  new ClassPeriod("Homeroom", "09:00", "09:05"),
-  new ClassPeriod("Science", "09:10", "09:40"),
-  new ClassPeriod("Math", "10:00", "10:45"),
-  new ClassPeriod("English", "10:50", "11:35"),
-  new ClassPeriod("Lunch", "11:40", "12:25"),
-  new ClassPeriod("Physical Education", "12:30", "13:15"),
-  new ClassPeriod("Art", "13:20", "14:05"),
-  new ClassPeriod("Social Studies", "14:10", "14:55"),
-  new ClassPeriod("Elective", "15:00", "15:45"),
-  new ClassPeriod("Dismissal", "21:50", "22:00"),
+  new ClassPeriod("Advisory", "08:00", "08:10"),
+  new ClassPeriod("Period 2", "09:25", "09:30"),
+  new ClassPeriod("US Chapel / MS Long Advisory", "09:35", "09:55"),
+  new ClassPeriod("MS Chapel / US Long Advisory", "10:00", "10:20"),
+  new ClassPeriod("Period 4", "10:25", "11:45"),
+  new ClassPeriod("US Middle Block / MS Lunch", "11:50", "12:30"),
+  new ClassPeriod("MS Middle Block / US Lunch", "12:35", "13:15"),
+  new ClassPeriod("Period 6", "13:20", "14:40"),
+  new ClassPeriod("Study Period", "14:45", "15:15"),
 ];
