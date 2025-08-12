@@ -7,9 +7,13 @@ import { WeeklySchedule } from "../types/weekTypes";
 import { getTodayIndex, mapScheduleWithClassNames } from "../utils/utils";
 import Schedule from "../components/schedule";
 import { useNavigate } from "react-router-dom";
+<<<<<<< Updated upstream
 import { ClassName } from "../types/className";
 import { useSchedule } from "../hooks/useSchedule";
 import { useMemo } from "react";
+=======
+import React from "react";
+>>>>>>> Stashed changes
 
 function Home() {
   const navigate = useNavigate();
@@ -19,6 +23,7 @@ function Home() {
   const BDay = { title: "B", schedule: bSchedule };
   const CDAY = { title: "C", schedule: cSchedule };
 
+<<<<<<< Updated upstream
   const defaultClassNames: ClassName[] = [
     { name: "Period 1", period: 1 },
     { name: "Period 2", period: 2 },
@@ -61,6 +66,22 @@ function Home() {
   }, [schedule, loading]);
 
   const thisWeek: WeeklySchedule = [ADay, ADay, BDay, CDAY, ADay];
+=======
+  const thisWeek: WeeklySchedule = [ADay, ADay, BDay, CDAY, ADay];
+  // also edit in utils
+
+  // Set document title based on today's index
+  React.useEffect(() => {
+    const todayIndex = getTodayIndex();
+    if (todayIndex !== -1) {
+      document.title = `TPSTIME - ${require("../utils/utils").getTimeLeftInPeriod(
+        thisWeek[todayIndex].schedule
+      )}`;
+    } else {
+      document.title = "TPSTIME";
+    }
+  }, [thisWeek]);
+>>>>>>> Stashed changes
 
   return (
     <>
