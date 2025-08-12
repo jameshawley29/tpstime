@@ -22,9 +22,7 @@ const Clock: React.FC<ClockProps> = ({ schedule }) => {
 
   return (
     <div className="flex flex-col items-start justify-center space-y-1 font-mono">
-      {status.isDayOver ? (
-        <p className="text-error">Schedule has ended for the day.</p>
-      ) : (
+      {status.isDayOver ? null : (
         <p
           className={`text-[25vw] md:text-[20vw] w-full font-bold text-center leading-none text-primary`}
         >
