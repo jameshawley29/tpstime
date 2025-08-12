@@ -1,6 +1,6 @@
 {
   "name": "tpstime",
-  "version": "0.1.0",
+  "version": "0.6.7",
   "private": true,
   "dependencies": {
     "@clerk/clerk-react": "^5.35.3",
