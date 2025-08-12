@@ -15,7 +15,7 @@ export const defaultSchedule = [
 
 export const aSchedule = [
   new ClassPeriod("Homeroom", "09:00", "09:10"),
-  new ClassPeriod("1", "09:15", "10:00", 1),
+  new ClassPeriod("1st Period", "09:15", "10:00", 1),
   new ClassPeriod("2", "10:05", "10:50", 2),
   new ClassPeriod("3", "10:55", "11:40", 3),
   new ClassPeriod("Lunch", "11:45", "12:30"),

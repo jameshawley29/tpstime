@@ -1,5 +1,4 @@
 import { useState, useCallback } from "react";
-import { useUser } from "@clerk/clerk-react";
 
 interface ScheduleItem {
   id?: number;
@@ -18,7 +17,6 @@ interface UseScheduleOperationsReturn {
 export function useScheduleOperations(
   onSuccess?: () => void
 ): UseScheduleOperationsReturn {
-  const { user } = useUser();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -26,10 +24,7 @@ export function useScheduleOperations(
 
   const updateClassPeriod = useCallback(
     async (period: number, subject: string): Promise<boolean> => {
-      if (!user?.id) {
-        setError("User not authenticated");
-        return false;
-      }
+  // No user authentication required
 
       if (!subject.trim()) {
         setError("Subject name cannot be empty");
@@ -41,7 +36,7 @@ export function useScheduleOperations(
 
       try {
         const response = await fetch(
-          `${API_URL}/schedule/${user.id}/${period}`,
+          `${API_URL}/schedule/${period}`,
           {
             method: "PUT",
             headers: {
@@ -72,22 +67,19 @@ export function useScheduleOperations(
         setLoading(false);
       }
     },
-    [user?.id, API_URL, onSuccess]
+    [API_URL, onSuccess]
   );
 
   const deleteClassPeriod = useCallback(
     async (period: number): Promise<boolean> => {
-      if (!user?.id) {
-        setError("User not authenticated");
-        return false;
-      }
+  // No user authentication required
 
       setLoading(true);
       setError(null);
 
       try {
         const response = await fetch(
-          `${API_URL}/schedule/${user.id}/${period}`,
+          `${API_URL}/schedule/${period}`,
           {
             method: "DELETE",
           }
@@ -114,7 +106,7 @@ export function useScheduleOperations(
         setLoading(false);
       }
     },
-    [user?.id, API_URL, onSuccess]
+    [API_URL, onSuccess]
   );
 
   return {

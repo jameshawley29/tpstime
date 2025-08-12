@@ -1,13 +1,12 @@
-import { useUser } from "@clerk/clerk-react";
 import { useNavigate } from "react-router-dom";
 import LogButton from "../components/logButton";
 import ScheduleEditor from "../components/ScheduleEditor";
 
 function Settings() {
-  const { user, isSignedIn } = useUser();
+  // No authentication required
   const navigate = useNavigate();
 
-  console.log("User:", user);
+  // ...existing code...
 
   return (
     <div className="text-primary bg-background min-h-screen">
@@ -35,16 +34,7 @@ function Settings() {
         <h1 className="text-2xl mb-8 text-text">Settings</h1>
 
         <div className="w-full max-w-md space-y-6">
-          {isSignedIn && user && (
-            <div className="border border-primary p-4 rounded-lg">
-              <h2 className="text-lg font-semibold mb-2">
-                Account Information
-              </h2>
-              <p className="text-secondary">
-                Email: {user.primaryEmailAddress?.emailAddress}
-              </p>
-            </div>
-          )}
+          {/* Account info removed, no authentication required */}
 
           <ScheduleEditor />
 
