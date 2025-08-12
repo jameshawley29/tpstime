@@ -14,20 +14,6 @@ export const aSchedule = [
   new ClassPeriod("Study Period", "15:00", "15:20"),
 ];
 
-/*export const aSchedule = [
-  new ClassPeriod("Advisory", "09:00", "09:10"),
-  new ClassPeriod("1st Period", "09:15", "10:00", 1),
-  new ClassPeriod("2", "10:05", "10:50", 2),
-  new ClassPeriod("3", "10:55", "11:40", 3),
-  new ClassPeriod("Lunch", "11:45", "12:30"),
-  new ClassPeriod("4", "12:35", "13:20", 4),
-  new ClassPeriod("5", "13:25", "14:10", 5),
-  new ClassPeriod("6", "14:15", "15:00", 6),
-  new ClassPeriod("7", "15:05", "16:00", 7),
-  new ClassPeriod("Dismissal", "21:50", "23:20"),
-  new ClassPeriod("Leave", "23:00", "23:59"),
-];
-//*/
 export const bSchedule = [
   new ClassPeriod("Advisory", "08:00", "08:10"),
   new ClassPeriod("Period 1", "09:25", "09:30"),
