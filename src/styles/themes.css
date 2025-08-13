@@ -1,44 +1,42 @@
 :root {
   /* Light theme colors (oklch) */
-  --color-primary: oklch(0.57 0.22 306.5);
-  --color-secondary: oklch(0.65 0.19 259.5);
-  --color-accent: oklch(75.083% 0.00009 271.152);
-  --color-background: #ffffff;
-  --color-surface: oklch(0.98 0.01 270);
-  --color-text: oklch(0.22 0.02 270);
-  --color-text-secondary: oklch(0.52 0.04 270);
-  --color-border: oklch(0.92 0.01 270);
-  --color-error: oklch(0.62 0.22 29.5);
-  --color-warning: oklch(0.83 0.19 81.5);
-  --color-success: oklch(0.77 0.19 142.5);
+    --color-primary: #FDB414; /* codes for AABCA (the letters up top) + settings page*/
+    --color-secondary: #FDB414; /* some shit in settings page */
+    --color-accent: #ffffff; /* no fucking clue */
+    --color-background: #002C5C; /* codes for background*/
+    --color-surface: #ffffff; /* NA */
+    --color-text: #FDB414; /* codes names, date, and "settings" word */
+    --color-text-secondary: #FDB414; /* periods and times*/
+    --color-border: #ffffff; /* useless */
+    --color-error: #ffffff; /* useless */
+    --color-warning: #ff0000; /* idrc */
+    --color-success: #10c50d; /* idrc */
 }
 
 [data-theme="dark"], .dark {
   /* Dark theme colors (oklch) */
-  --color-primary: oklch(98.5% 0.001 106.423);
-  --color-secondary: oklch(0.65 0.19 259.5);
-  --color-accent: oklch(23.503% 0.00003 271.152);
-  --color-background: #201f23;
-  --color-surface: oklch(0.18 0.01 270);
-  --color-text: oklch(0.95 0.01 270);
-  --color-text-secondary: oklch(49.284% 0.02519 268.187);
-  --color-border: oklch(0.28 0.01 270);
-  --color-error: oklch(0.62 0.22 29.5);
-  --color-warning: oklch(0.83 0.19 81.5);
-  --color-success: oklch(0.77 0.19 142.5);
+  --color-primary: #ffffff;
+  --color-secondary: #ffffff;
+  --color-accent: #ffffff;
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+  --color-text-secondary: #ffffff;
+  --color-border: #ffffff;
+  --color-error: #ffffff;
+  --color-warning: #ffffff;
+  --color-success: #ffffff;
 }
 
 [data-theme="blue"] {
   /* Blue theme colors (oklch) */
-  --color-primary: oklch(0.55 0.19 255);
-  --color-secondary: oklch(0.65 0.19 259.5);
-  --color-accent: oklch(0.74 0.19 206.5);
-  --color-background: #fcfcfd;
-  --color-surface: oklch(0.96 0.01 255);
-  --color-text: oklch(0.32 0.04 255);
-  --color-text-secondary: oklch(0.52 0.04 270);
-  --color-border: oklch(0.88 0.01 255);
-  --color-error: oklch(0.62 0.22 29.5);
-  --color-warning: oklch(0.83 0.19 81.5);
-  --color-success: oklch(0.77 0.19 142.5);
+  --color-primary: #ffffff;
+  --color-secondary: #ffffff;
+  --color-accent: #ffffff;
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+  --color-text-secondary: #ffffff;
+  --color-border: #ffffff;
+  --color-error: #ffffff;
+  --color-warning: #ffffff;
+  --color-success: #ffffff;
 }

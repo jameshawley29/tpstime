@@ -65,7 +65,7 @@ function Home() {
 
   return (
     <>
-      <div className="text-text bg-background">
+  <div className="text-text bg-background">
         {getTodayIndex() === -1 ? (
           <div className="text-secondary w-full h-screen flex justify-center items-center text-2xl align-middle">
             No schedule available for today.
@@ -108,13 +108,14 @@ function Home() {
             </div>
             <div className="py-10 md:py-0"></div>
             <section className="w-full flex justify-between">
-              <div className="px-2">
-                <button onClick={() => navigate("/settings")}>Settings</button>
+              <div className="pl-4 md:pl-8">
+                <button className="text-2xl md:text-4xl" onClick={() => navigate("/settings")}>Settings</button>
               </div>
-              <div className="px-2 text-text-secondary">
+              <div className="pr-4 md:pr-8 text-text text-2xl md:text-4xl">
                 <Signature />
               </div>
             </section>
+            <div className="w-full h-4 bg-background" />
           </>
         )}
       </div>

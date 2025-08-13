@@ -10,7 +10,7 @@ const ThemeSwitcher: React.FC = () => {
 
   return (
     <div className="p-4 bg-surface rounded-lg border border-border">
-      <h3 className="text-lg font-semibold text-text mb-4">Theme Settings</h3>
+  <h3 className="text-lg font-semibold text-text mb-4">Theme Settings</h3>
       
       {/* Theme Selector */}
       <div className="mb-4">
@@ -51,7 +51,7 @@ const ThemeSwitcher: React.FC = () => {
 
       {/* Theme Preview */}
       <div className="p-3 bg-background border border-border rounded">
-        <p className="text-text">Primary text</p>
+  <p className="text-text">Primary text</p>
         <p className="text-text-secondary">Secondary text</p>
         <p className="text-primary">Primary color</p>
         <p className="text-error">Error color</p>

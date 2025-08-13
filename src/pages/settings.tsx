@@ -31,7 +31,7 @@ function Settings() {
         </button>
       </div>
       <div className="p-8 flex flex-col items-center justify-center bg-background">
-        <h1 className="text-2xl mb-8 text-text">Settings</h1>
+  <h1 className="text-2xl mb-8 text-text">Settings</h1>
 
         <div className="w-full max-w-md space-y-6">
           {/* Account info removed, no authentication required */}
