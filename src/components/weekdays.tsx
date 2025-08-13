@@ -7,9 +7,16 @@ type WeekdaysProps = {
 
 function Weekdays({ weeklySchedule, todayIndex }: WeekdaysProps) {
   return (
-    <div className="flex w-full md:justify-start [&>*]:max-w-10 [&>*]:text-primary [&>*]:p-2 [&>*]:rounded [&>*]:flex-1 [&>*]:px-4 [&>*]:text-center justify-between items-center">
+    <div className="flex w-full md:justify-start justify-between items-center gap-2">
       {weeklySchedule.map((day, index) => (
-        <div key={index} className="font-bold">
+        <div
+          key={index}
+          className={
+            `${index === todayIndex
+              ? 'font-bold text-3xl bg-primary/10 px-4 py-2 rounded text-primary shadow'
+              : 'font-normal text-2xl text-primary px-4 py-2 rounded'}`
+          }
+        >
           {day.title}
         </div>
       ))}
