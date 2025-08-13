@@ -26,8 +26,8 @@ export const bSchedule = [
 ];
 
 export const cSchedule = [
-  new ClassPeriod("Advisory", "08:00", "08:10"),
-  new ClassPeriod("Period 2", "09:25", "09:30"),
+  new ClassPeriod("Advisory", "08:00", "08:05"),
+  new ClassPeriod("Period 2", "08:10", "09:30"),
   new ClassPeriod("US Chapel / MS Long Advisory", "09:35", "09:55"),
   new ClassPeriod("MS Chapel / US Long Advisory", "10:00", "10:20"),
   new ClassPeriod("Period 4", "10:25", "11:45"),
