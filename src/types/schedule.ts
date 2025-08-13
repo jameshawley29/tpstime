@@ -16,7 +16,7 @@ export const aSchedule = [
 
 export const bSchedule = [
   new ClassPeriod("Advisory", "08:00", "08:10"),
-  new ClassPeriod("Period 1", "09:25", "09:30"),
+  new ClassPeriod("Period 1", "08:15", "09:30"),
   new ClassPeriod("Break", "09:35", "09:55"),
   new ClassPeriod("Period 3", "10:00", "11:20"),
   new ClassPeriod("Period 5", "11:25", "12:45"),
