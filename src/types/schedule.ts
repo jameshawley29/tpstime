@@ -53,25 +53,30 @@ export const cSchedule = [
   new ClassPeriod("Dismissal", "21:50", "22:00"),
 ];
 
-// Grade-specific schedules - these can be easily modified as variables
+// Grade-specific schedules - these can be easily modified as variables 
+
 export const middleSchoolSchedule = [
-  new ClassPeriod("Advisory", "08:00", "08:05"),
-  new ClassPeriod("1st Period", "08:10", "09:30", 1),
-  new ClassPeriod("Flex/Break", "09:35", "09:55"),
-  new ClassPeriod("3rd Period", "10:00", "11:20", 3),
-  new ClassPeriod("Lunch", "11:25", "12:05"),
-  new ClassPeriod("5th Period", "12:10", "13:30", 5),
-  new ClassPeriod("7th Period", "13:35", "14:55", 7),
-  new ClassPeriod("Study Period", "15:00", "15:20"),
+  new ClassPeriod("Advisory", "08:00", "08:20"),
+  new ClassPeriod("2nd Period", "08:25", "09:45", 2),
+  new ClassPeriod("Flex/Break", "09:50", "10:15"),
+  new ClassPeriod("4th Period", "10:20", "11:40", 4),
+  new ClassPeriod("Lunch", "11:45", "12:25"),
+  new ClassPeriod("Middle Block/Chapel", "12:30", "13:20"),
+  new ClassPeriod("6th Period", "13:25", "14:45", 6),
+  new ClassPeriod("Study Period", "14:50", "15:15")
 ];
 
 export const highSchoolSchedule = [
-  new ClassPeriod("Advisory", "08:00", "08:05"),
-  new ClassPeriod("1st Period", "08:10", "09:30", 1),
-  new ClassPeriod("Flex/Break", "09:35", "09:55"),
-  new ClassPeriod("3rd Period", "10:00", "11:20", 3),
-  new ClassPeriod("5th Period", "11:25", "12:45", 5),
-  new ClassPeriod("Lunch", "12:50", "13:30"),
-  new ClassPeriod("7th Period", "13:35", "14:55", 7),
-  new ClassPeriod("Study Period", "15:00", "15:20"),
+  new ClassPeriod("Advisory", "08:00", "08:20"),
+  new ClassPeriod("2nd Period", "08:25", "09:45", 2),
+  new ClassPeriod("Flex/Break", "09:50", "10:15"),
+  new ClassPeriod("4th Period", "10:20", "11:40", 4),
+  new ClassPeriod("Middle Block/Chapel", "11:45", "12:35"),
+  new ClassPeriod("Lunch", "12:40", "13:20"),
+  new ClassPeriod("6th Period", "13:25", "14:45", 6),
+  new ClassPeriod("Study Period", "14:50", "15:15")
 ];
+
+
+
+
