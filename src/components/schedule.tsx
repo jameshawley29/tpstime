@@ -32,27 +32,28 @@ const Schedule: React.FC<ScheduleProps> = ({ schedule }) => {
     };
   }, [schedule]);
 
-  // Update document.title with minutes left
+  // Update document.title to match homepage clock logic
   useEffect(() => {
+    const { getScheduleStatus } = require("../hooks/scheduleStatus");
     const updateTitle = () => {
-      if (!activePeriodInfo.period) {
-        document.title = "TPSTIME";
+      const status = getScheduleStatus(schedule);
+      if (status.isDayOver) {
+        document.title = "School Day Complete";
         return;
       }
-      // Get current time and period end time
-      const now = new Date();
-      const [endHour, endMinute] = activePeriodInfo.period.end.split(":").map(Number);
-      const end = new Date();
-      end.setHours(endHour, endMinute, 0, 0);
-      let diffMs = end.getTime() - now.getTime();
-      let minutesLeft = Math.ceil(diffMs / (1000 * 60));
-      if (minutesLeft < 0) minutesLeft = 0;
-      document.title = `${minutesLeft} minute${minutesLeft === 1 ? '' : 's'} left`;
+      const totalMinutes = Math.ceil(status.secondsUntilNext / 60);
+      if (status.currentPeriod) {
+        document.title = `${totalMinutes} minute${totalMinutes === 1 ? '' : 's'} until ${status.currentPeriod.name} ends`;
+      } else if (status.nextPeriod) {
+        document.title = `${totalMinutes} minute${totalMinutes === 1 ? '' : 's'} until ${status.nextPeriod.name} starts`;
+      } else {
+        document.title = "TPSTIME";
+      }
     };
     updateTitle();
     const interval = setInterval(updateTitle, 1000);
     return () => clearInterval(interval);
-  }, [activePeriodInfo.period]);
+  }, [schedule]);
 
   return (
     <div className="w-full">

@@ -1,5 +1,6 @@
 import Clock from "../components/clock";
 import ClockDescription from "../components/clockDescription";
+import TimeSync from "../components/TimeSync";
 import { aSchedule, bSchedule, cSchedule } from "../types/schedule";
 import { msASchedule, msBSchedule, msCSchedule } from "../types/msSchedule";
 import Weekdays from "../components/weekdays";
@@ -122,6 +123,10 @@ function Home() {
                   classNames
                 )}
               />
+              {/* TimeSync accuracy below the clock */}
+              <div className="w-full flex justify-center mt-2">
+                <TimeSync />
+              </div>
             </div>
           </div>
           <div className="w-full px-2 sm:px-8 pt-0 mt-4 bg-background flex justify-center">
