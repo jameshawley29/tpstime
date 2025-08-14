@@ -58,7 +58,7 @@ const Schedule: React.FC<ScheduleProps> = ({ schedule }) => {
               }`}
             >
               <h3 className={`text-xl md:text-5xl${isActivePeriod ? ' font-bold' : ''}`}>{period.name}</h3>
-              <p className="text-lg md:text-5xl">
+              <p className={`text-lg md:text-5xl${isActivePeriod ? ' font-bold' : ''}`}> 
                 {convertTo12Hour(period.start)} - {convertTo12Hour(period.end)}
               </p>
             </div>
