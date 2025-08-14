@@ -54,7 +54,7 @@ const Info: React.FC = () => (
         <li>Google authentication of your TPS account</li>
         <li>Ability to access website without being on TPS wifi</li>
         <li>Display of class schedule</li>
-        <li>Theme switching (light/dark)</li>
+  {/* Theme switching removed from To Be Implemented */}
         <li>Customizable schedule editor</li>
       </ul>
     </section>
@@ -64,7 +64,8 @@ const Info: React.FC = () => (
         <li>Clock and time display</li>
         <li>Logging button</li>
         <li>Weekday selection</li>
-        <li>Responsive design</li>
+  <li>Responsive design</li>
+  <li>Theme switching (light/dark)</li>
       </ul>
     </section>
     <section className="mb-6">

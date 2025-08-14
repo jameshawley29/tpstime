@@ -68,7 +68,7 @@ const HamburgerMenu: React.FC = () => {
 		};
 	}, [open]);
 
-	const hamburgerBtnBase = "flex flex-col justify-center items-center w-10 h-10 rounded-lg border-2 border-accent bg-background shadow-sm transition-colors duration-150";
+	const hamburgerBtnBase = "flex flex-col justify-center items-center w-10 h-10 rounded-lg border-2 border-primary bg-background shadow-sm transition-colors duration-150";
 	const hamburgerBtnHover = "hover:bg-accent";
 	const hamburgerBtnActiveMobile = isMobile && open ? "bg-accent" : "";
 
@@ -79,9 +79,9 @@ const HamburgerMenu: React.FC = () => {
 				aria-label="Menu"
 				onClick={() => setOpen((prev) => !prev)}
 			>
-				<span className="block w-6 h-1 bg-accent mb-1 rounded transition-all"></span>
-				<span className="block w-6 h-1 bg-accent mb-1 rounded transition-all"></span>
-				<span className="block w-6 h-1 bg-accent rounded transition-all"></span>
+				<span className="block w-6 h-1 bg-primary mb-1 rounded transition-all"></span>
+				<span className="block w-6 h-1 bg-primary mb-1 rounded transition-all"></span>
+				<span className="block w-6 h-1 bg-primary rounded transition-all"></span>
 			</button>
 			{open && (
 				<div className="absolute right-0 mt-2 w-44 bg-background border border-accent rounded shadow-lg z-50">

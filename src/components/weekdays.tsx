@@ -13,7 +13,7 @@ function Weekdays({ weeklySchedule, todayIndex }: WeekdaysProps) {
           key={index}
           className={
             `${index === todayIndex
-              ? 'font-bold text-3xl bg-primary/10 px-4 py-2 rounded text-primary shadow outline outline-2 outline-primary'
+              ? 'font-bold text-3xl bg-primary/10 px-4 py-2 rounded text-primary'
               : 'font-normal text-2xl text-primary px-4 py-2 rounded'}`
           }
         >

@@ -34,7 +34,7 @@ const Schedule: React.FC<ScheduleProps> = ({ schedule }) => {
 
   return (
     <div className="w-full">
-  <h2 className="text-4xl md:text-7xl py-8 text-text">{formattedDate}</h2>
+  <h2 className="text-4xl md:text-7xl py-8 text-text-secondary" style={{marginTop: '+75px'}}>{formattedDate}</h2>
       <div>
         {/* Flaw in the code below: it is computing the current class based on if
         two strings are the same, it should be an index based system as to not
@@ -57,7 +57,7 @@ const Schedule: React.FC<ScheduleProps> = ({ schedule }) => {
                   : "text-text-secondary"
               }`}
             >
-              <h3 className="text-xl md:text-5xl">{period.name}</h3>
+              <h3 className={`text-xl md:text-5xl${isActivePeriod ? ' font-bold' : ''}`}>{period.name}</h3>
               <p className="text-lg md:text-5xl">
                 {convertTo12Hour(period.start)} - {convertTo12Hour(period.end)}
               </p>

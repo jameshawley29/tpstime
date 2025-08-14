@@ -1,0 +1,42 @@
+:root {
+  /* Light theme colors (oklch) */
+    --color-primary: #FDB414; /* codes for AABCA (the letters up top) + settings page*/
+    --color-secondary: #FDB414; /* some shit in settings page */
+    --color-accent: #ffffff; /* no fucking clue */
+    --color-background: #002C5C; /* codes for background*/
+    --color-surface: #ffffff; /* NA */
+    --color-text: #FDB414; /* codes names, date, and "settings" word */
+    --color-text-secondary: #FDB414; /* periods and times*/
+    --color-border: #ffffff; /* useless */
+    --color-error: #ffffff; /* useless */
+    --color-warning: #ff0000; /* idrc */
+    --color-success: #10c50d; /* idrc */
+}
+
+ [data-theme="dark"], .dark {
+  /* Dark theme colors (oklch) */
+  --color-primary: #FDB414;
+  --color-secondary: #ffffff;
+  --color-accent: #ffffff;
+  --color-background: #002C5C;
+  --color-surface: #ffffff;
+  --color-text-secondary: #FDB414;
+  --color-border: #ffffff;
+  --color-error: #ffffff;
+  --color-warning: #ff0000;
+  --color-success: #10c50d;
+}
+
+[data-theme="blue"] {
+  /* Blue theme colors (oklch) */
+  --color-primary: #ffffff;
+  --color-secondary: #ffffff;
+  --color-accent: #ffffff;
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+  --color-text-secondary: #ffffff;
+  --color-border: #ffffff;
+  --color-error: #ffffff;
+  --color-warning: #ffffff;
+  --color-success: #ffffff;
+}
