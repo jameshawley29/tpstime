@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 import HamburgerMenu from "../components/HamburgerMenu";
+import FooterNote from "../components/FooterNote";
 
 const BackButton: React.FC = () => {
   const navigate = useNavigate();
@@ -42,7 +43,7 @@ const Info: React.FC = () => (
     <section className="mb-6">
       <h2 className="text-xl font-semibold mb-2">Team</h2>
       <ul className="list-disc ml-6">
-        <li><strong>Owners:</strong> Joe Borgman and Asad Sadikov</li>
+        <li><strong>Developed By:</strong> Joe Borgman and Asad Sadikov</li>
         <li><strong>Helper:</strong> Ryo Kimura</li>
         <li><strong>Original Founder:</strong> James Hawley</li>
         <li><strong>Sponsors:</strong> Alex Podchaski and Tim Eischens</li>
@@ -53,7 +54,7 @@ const Info: React.FC = () => (
       <ul className="list-disc ml-6">
         <li>Google authentication of your TPS account</li>
         <li>Ability to access website without being on TPS wifi</li>
-        <li>Display of class schedule</li>
+        <li>Display of a personal class schedule</li>
   {/* Theme switching removed from To Be Implemented */}
         <li>Customizable schedule editor</li>
       </ul>
@@ -65,7 +66,6 @@ const Info: React.FC = () => (
         <li>Logging button</li>
         <li>Weekday selection</li>
   <li>Responsive design</li>
-  <li>Theme switching (light/dark)</li>
       </ul>
     </section>
     <section className="mb-6">
@@ -74,10 +74,34 @@ const Info: React.FC = () => (
         <li>Added info page</li>
         <li>Improved navigation with hamburger menu</li>
         <li>Minor UI enhancements</li>
+        <li>Added TimeSync with server (Sometimes offline)</li>
+        <li>Added Theme switching (Many options available)</li>
       </ul>
     </section>
     </div>
   </div>
 );
 
-export default Info;
+
+
+// ...existing code...
+
+
+const InfoWithFooter: React.FC = () => (
+  <div className="min-h-screen flex flex-col bg-background">
+    {/* Top bar: HamburgerMenu top right */}
+    <div className="w-full flex flex-row justify-between items-center pt-4 pb-2 px-2 sm:px-4">
+      <div />
+      <div className="flex flex-row items-center gap-2">
+        <HamburgerMenu />
+      </div>
+    </div>
+    <div className="flex-1 flex items-center justify-center">
+      <Info />
+    </div>
+    <FooterNote />
+  </div>
+);
+
+
+export default InfoWithFooter;

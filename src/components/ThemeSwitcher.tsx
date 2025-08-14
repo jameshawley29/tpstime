@@ -38,17 +38,13 @@ const ThemePreview: React.FC<{ theme: string; customPrimary: string }> = ({ them
 );
 
 const ThemeSwitcher: React.FC = () => {
-  const { theme, setTheme, updateThemeColor } = useTheme();
-
-  const [customPrimary, setCustomPrimary] = useState<string>('');
+  const { theme, setTheme, customPrimary, updateThemeColor } = useTheme();
 
   const handleCustomColorChange = (color: string) => {
-    setCustomPrimary(color);
     updateThemeColor('color-primary', color);
   };
 
   const handleDefaultColor = () => {
-    setCustomPrimary('');
     updateThemeColor('color-primary', ''); // Remove inline style, fallback to CSS var
   };
 

@@ -14,6 +14,7 @@ import { useSchedule } from "../hooks/useSchedule";
 import { useMemo } from "react";
 import React from "react";
 import HamburgerMenu from "../components/HamburgerMenu";
+import FooterNote from "../components/FooterNote";
 
 function Home() {
   const [scheduleType, setScheduleType] = React.useState<'US' | 'MS'>(() => {
@@ -139,12 +140,20 @@ function Home() {
               />
             </div>
           </div>
-          <div className="py-6 md:py-0"></div>
-          <div className="w-full h-4 bg-background" />
+          {/* Removed extra bottom spacing and bar to fix white gap */}
         </>
       )}
     </div>
   );
 }
 
-export default Home;
+
+
+const HomeWithFooter: React.FC = () => (
+  <>
+    <Home />
+    <FooterNote />
+  </>
+);
+
+export default HomeWithFooter;

@@ -6,6 +6,7 @@ export type Theme = 'Trinity' | 'light' | 'dark' | 'blue' | 'forest' | 'rose' | 
 interface ThemeContextType {
   theme: Theme;
   setTheme: (theme: Theme) => void;
+  customPrimary: string;
   updateThemeColor: (colorVar: string, value: string) => void;
 }
 
@@ -20,6 +21,9 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     const saved = localStorage.getItem('theme') as Theme;
     return saved || 'Trinity';
   });
+  const [customPrimary, setCustomPrimary] = useState<string>(() => {
+    return localStorage.getItem('customPrimary') || '';
+  });
 
   useEffect(() => {
     const root = document.documentElement;
@@ -33,6 +37,14 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     localStorage.setItem('theme', theme);
   }, [theme]);
 
+  useEffect(() => {
+    if (customPrimary) {
+      document.documentElement.style.setProperty('--color-primary', customPrimary);
+    } else {
+      document.documentElement.style.removeProperty('--color-primary');
+    }
+  }, [customPrimary]);
+
   const setTheme = (newTheme: Theme) => {
     setThemeState(newTheme);
     localStorage.setItem('theme', newTheme);
@@ -40,10 +52,14 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 
   const updateThemeColor = (colorVar: string, value: string) => {
     document.documentElement.style.setProperty(`--${colorVar}`, value);
+    if (colorVar === 'color-primary') {
+      setCustomPrimary(value);
+      localStorage.setItem('customPrimary', value);
+    }
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme, updateThemeColor }}>
+    <ThemeContext.Provider value={{ theme, setTheme, customPrimary, updateThemeColor }}>
       {children}
     </ThemeContext.Provider>
   );

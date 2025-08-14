@@ -3,6 +3,7 @@ import LogButton from "../components/logButton";
 import HamburgerMenu from "../components/HamburgerMenu";
 import ScheduleEditor from "../components/ScheduleEditor";
 import ThemeSwitcher from "../components/ThemeSwitcher";
+import FooterNote from "../components/FooterNote";
 
 const enableYourSchedule = process.env.REACT_APP_ENABLE_YOUR_SCHEDULE === 'true';
 
@@ -36,4 +37,15 @@ function Settings() {
   );
 }
 
-export default Settings;
+export default function SettingsPage() {
+  return (
+    <div className="min-h-screen flex flex-col bg-background">
+      <div className="flex-1 flex flex-col">
+        <Settings />
+      </div>
+      <FooterNote />
+    </div>
+  );
+}
+
+// export default Settings;

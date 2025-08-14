@@ -61,4 +61,13 @@ const ThemeSwitcher: React.FC = () => {
   );
 };
 
-export default ThemeSwitcher;
+import FooterNote from "../components/FooterNote";
+
+const ThemeSwitcherWithFooter: React.FC = () => (
+  <>
+    <ThemeSwitcher />
+    <FooterNote />
+  </>
+);
+
+export default ThemeSwitcherWithFooter;
