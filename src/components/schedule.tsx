@@ -17,6 +17,19 @@ const Schedule: React.FC<ScheduleProps> = ({ schedule }) => {
 
   const [highlightNext, setHighlightNext] = useState(false);
 
+    // Dynamic margin multiplier for schedule position
+    const [scheduleMargin, setScheduleMargin] = useState(0);
+
+    useEffect(() => {
+      // Set margin based on window height and multiplier
+      const multiplier = 1.1; // Tweak this value as needed
+      setScheduleMargin(window.innerHeight * multiplier);
+      // Optionally update on resize
+      const handleResize = () => setScheduleMargin(window.innerHeight * multiplier);
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
   useEffect(() => {
     const statusInterval = setInterval(() => {
       setActivePeriodInfo(getActivePeriod(schedule));
@@ -57,8 +70,15 @@ const Schedule: React.FC<ScheduleProps> = ({ schedule }) => {
 
   return (
     <div className="w-full">
-  <h2 className="text-4xl md:text-7xl py-8 text-text-secondary" style={{marginTop: '+85px'}}>{formattedDate}</h2>
-      <div>
+      {/* Center the time and remove static margin */}
+      <h2
+        className="text-4xl md:text-7xl py-8 text-text-secondary flex justify-center items-center"
+        style={{ marginTop: 0 }}
+      >
+        {formattedDate}
+      </h2>
+      {/* Schedule container with dynamic margin */}
+      <div style={{ marginTop: `${scheduleMargin}px`, transition: 'margin-top 0.5s' }}>
         {/* Flaw in the code below: it is computing the current class based on if
         two strings are the same, it should be an index based system as to not
         have future errors */}
