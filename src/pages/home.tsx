@@ -88,7 +88,7 @@ function Home() {
     : [ADayMS, ADayMS, BDayMS, CDAYMS, ADayMS];
 
   return (
-  <div className="text-text bg-background min-h-screen w-full flex flex-col relative">
+    <div className="text-text bg-background min-h-screen w-full flex flex-col relative">
       {/* Top bar: HamburgerMenu and Weekdays on same row */}
       <div className="w-full flex flex-row justify-between items-center pt-4 pb-2 px-2 sm:px-4">
         <div className="flex flex-row items-center gap-2">
@@ -103,12 +103,12 @@ function Home() {
       </div>
       {/* Main content */}
       {getTodayIndex() === -1 ? (
-        <div className="text-secondary w-full min-h-screen flex justify-center items-center text-xl sm:text-2xl align-middle">
+        <div className="text-secondary w-full min-h-[60vh] flex justify-center items-center text-xl sm:text-2xl align-middle">
           No schedule available for today.
         </div>
       ) : (
         <>
-          <div className="flex flex-col items-center justify-center w-full bg-background min-h-screen">
+          <div className="flex flex-col items-center justify-center w-full bg-background px-2 py-6 sm:p-8 min-h-[60vh] justify-center">
             <div className="flex flex-col items-center w-full max-w-2xl">
               <div className="w-full px-2 sm:px-4 mb-2">
                 <ClockDescription
@@ -140,6 +140,7 @@ function Home() {
               />
             </div>
           </div>
+          {/* Removed extra bottom spacing and bar to fix white gap */}
         </>
       )}
     </div>
