@@ -1,42 +1,101 @@
+
 :root {
-  /* Light theme colors (oklch) */
-    --color-primary: #FDB414; /* codes for AABCA (the letters up top) + settings page*/
-    --color-secondary: #FDB414; /* some shit in settings page */
-    --color-accent: #ffffff; /* no fucking clue */
-    --color-background: #002C5C; /* codes for background*/
-    --color-surface: #ffffff; /* NA */
-    --color-text: #FDB414; /* codes names, date, and "settings" word */
-    --color-text-secondary: #FDB414; /* periods and times*/
-    --color-border: #ffffff; /* useless */
-    --color-error: #ffffff; /* useless */
-    --color-warning: #ff0000; /* idrc */
-    --color-success: #10c50d; /* idrc */
+  /* Default Light theme */
+  --color-primary: #1976d2;
+  --color-secondary: #90caf9;
+  --color-accent: #e3f2fd;
+  --color-background: #f5f5f5;
+  --color-surface: #ffffff;
+  --color-text: #212121;
+  --color-text-secondary: #757575;
+  --color-border: #e0e0e0;
+  --color-error: #d32f2f;
+  --color-warning: #ffa000;
+  --color-success: #388e3c;
+}
+
+[data-theme="trinity"] {
+  /* Trinity theme (old light) */
+  --color-primary: #FDB414;
+  --color-secondary: #FDB414;
+  --color-accent: #FDB414;
+  --color-background: #002C5C;
+  --color-surface: #00438b;
+  --color-text: #FDB414;
+  --color-text-secondary: #FDB414;
+  --color-border: #ffffff;
+  --color-error: #ff6464;
+  --color-warning: #ff0000;
+  --color-success: #10c50d;
+}
+
+[data-theme="forest"] {
+  --color-primary: #228B22;
+  --color-secondary: #6B8E23;
+  --color-accent: #A9DFBF;
+  --color-background: #1B2E1B;
+  --color-surface: #2E4632;
+  --color-text: #E9F5DB;
+  --color-text-secondary: #B7C9A8;
+  --color-border: #228B22;
+  --color-error: #ff6464;
+  --color-warning: #ffae00;
+  --color-success: #10c50d;
+}
+
+[data-theme="rose"] {
+  --color-primary: #E75480;
+  --color-secondary: #FFB6C1;
+  --color-accent: #FFD1DC;
+  --color-background: #2A1B2E;
+  --color-surface: #4B2E46;
+  --color-text: #FFF0F5;
+  --color-text-secondary: #FFD1DC;
+  --color-border: #E75480;
+  --color-error: #ff6464;
+  --color-warning: #ffae00;
+  --color-success: #10c50d;
+}
+
+[data-theme="ocean"] {
+  --color-primary: #1CA9C9;
+  --color-secondary: #00CED1;
+  --color-accent: #B2EBF2;
+  --color-background: #102A43;
+  --color-surface: #1B3A4B;
+  --color-text: #E0F7FA;
+  --color-text-secondary: #B2EBF2;
+  --color-border: #1CA9C9;
+  --color-error: #ff6464;
+  --color-warning: #ffae00;
+  --color-success: #10c50d;
+}
+
+[data-theme="sunset"] {
+  --color-primary: #FF5E13;
+  --color-secondary: #FFB347;
+  --color-accent: #FFD580;
+  --color-background: #2E1B1B;
+  --color-surface: #46322E;
+  --color-text: #FFF5E1;
+  --color-text-secondary: #FFD580;
+  --color-border: #FF5E13;
+  --color-error: #ff6464;
+  --color-warning: #ffae00;
+  --color-success: #10c50d;
 }
 
 [data-theme="dark"], .dark {
   /* Dark theme colors (oklch) */
-  --color-primary: #ffffff;
-  --color-secondary: #ffffff;
-  --color-accent: #ffffff;
-  --color-background: #ffffff;
-  --color-surface: #ffffff;
-  --color-text-secondary: #ffffff;
-  --color-border: #ffffff;
-  --color-error: #ffffff;
-  --color-warning: #ffffff;
-  --color-success: #ffffff;
-}
-
-[data-theme="blue"] {
-  /* Blue theme colors (oklch) */
-  --color-primary: #ffffff;
-  --color-secondary: #ffffff;
-  --color-accent: #ffffff;
-  --color-background: #ffffff;
-  --color-surface: #ffffff;
-  --color-text-secondary: #ffffff;
-  --color-border: #ffffff;
-  --color-error: #ffffff;
-  --color-warning: #ffffff;
-  --color-success: #ffffff;
+  --color-primary: #FDB414;
+  --color-secondary: #FDB414;
+  --color-accent: #FDB414;
+  --color-background: #181A20;
+  --color-surface: #23272F;
+  --color-text: #FDB414;
+  --color-text-secondary: #B7B7B7;
+  --color-border: #333A47;
+  --color-error: #ff6464;
+  --color-warning: #ffae00;
+  --color-success: #10c50d;
 }

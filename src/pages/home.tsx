@@ -12,11 +12,23 @@ import { ClassName } from "../types/className";
 import { useSchedule } from "../hooks/useSchedule";
 import { useMemo } from "react";
 import React from "react";
+import HamburgerMenu from "../components/HamburgerMenu";
 
 function Home() {
-  const [scheduleType, setScheduleType] = React.useState<'US' | 'MS'>('US');
+  const [scheduleType, setScheduleType] = React.useState<'US' | 'MS'>(() => {
+    const saved = localStorage.getItem('scheduleType');
+    return saved === 'MS' ? 'MS' : 'US';
+  });
   const navigate = useNavigate();
   const { schedule, loading } = useSchedule();
+
+  React.useEffect(() => {
+    const handler = (e: any) => {
+      setScheduleType(e.detail);
+    };
+    window.addEventListener('scheduleTypeChanged', handler);
+    return () => window.removeEventListener('scheduleTypeChanged', handler);
+  }, []);
 
   // US schedule
   const ADayUS = { title: "A", schedule: aSchedule };
@@ -74,69 +86,31 @@ function Home() {
     : [ADayMS, ADayMS, BDayMS, CDAYMS, ADayMS];
 
   return (
-    <div className="text-text bg-background min-h-screen">
-      {/* Top bar: Weekdays, MS/US buttons, Settings button */}
-      <div className="w-full flex flex-row justify-between items-start pt-6 pb-2 px-4">
-        <div className="w-fit">
-          <Weekdays
-            weeklySchedule={thisWeek}
-            todayIndex={getTodayIndex()}
-          />
-        </div>
-        <div className="flex gap-3 items-center w-fit">
-          <button
-            className={`px-4 py-2 rounded-lg border-2 text-lg font-bold transition-colors duration-150 ${scheduleType === 'US' ? 'bg-primary text-background border-primary' : 'bg-background text-primary border-primary'}`}
-            onClick={() => setScheduleType('US')}
-          >
-            US
-          </button>
-          <button
-            className={`px-4 py-2 rounded-lg border-2 text-lg font-bold transition-colors duration-150 ${scheduleType === 'MS' ? 'bg-primary text-background border-primary' : 'bg-background text-primary border-primary'}`}
-            onClick={() => setScheduleType('MS')}
-          >
-            MS
-          </button>
-          {/* Hamburger menu */}
-          <div className="relative group ml-2">
-            <button
-              className="flex flex-col justify-center items-center w-10 h-10 rounded-lg border-2 border-accent bg-background shadow-sm hover:bg-accent"
-              aria-label="Menu"
-            >
-              <span className="block w-6 h-1 bg-accent mb-1 rounded transition-all"></span>
-              <span className="block w-6 h-1 bg-accent mb-1 rounded transition-all"></span>
-              <span className="block w-6 h-1 bg-accent rounded transition-all"></span>
-            </button>
-            <div className="absolute right-0 mt-2 w-32 bg-background border border-accent rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-50">
-              <button
-                className="w-full text-left px-4 py-2 hover:bg-accent hover:text-background text-text font-semibold rounded-t"
-                onClick={() => navigate('/settings')}
-              >
-                Settings
-              </button>
-              <button
-                className="w-full text-left px-4 py-2 hover:bg-accent hover:text-background text-text font-semibold rounded-b"
-                onClick={() => navigate('/info')}
-              >
-                Info
-              </button>
-            </div>
-          </div>
+    <div className="text-text bg-background min-h-screen w-full flex flex-col relative">
+      {/* Top bar: HamburgerMenu top right, empty left div for alignment */}
+      <div className="w-full flex flex-row justify-between items-center pt-4 pb-2 px-2 sm:px-4">
+        <div />
+        <div className="flex flex-row items-center gap-2">
+          <HamburgerMenu />
         </div>
       </div>
-      {/* Signature under buttons */}
-      <div className="w-full flex justify-end pr-8 mt-1">
-        <Signature />
+      {/* Weekdays below top bar for visual logic */}
+      <div className="w-full flex flex-row justify-center items-center mb-2">
+        <Weekdays
+          weeklySchedule={thisWeek}
+          todayIndex={getTodayIndex()}
+        />
       </div>
       {/* Main content */}
       {getTodayIndex() === -1 ? (
-        <div className="text-secondary w-full h-screen flex justify-center items-center text-2xl align-middle">
+        <div className="text-secondary w-full min-h-[60vh] flex justify-center items-center text-xl sm:text-2xl align-middle">
           No schedule available for today.
         </div>
       ) : (
         <>
-          <div className="min-h-screen flex items-center justify-center bg-background p-8">
-            <div className="flex flex-col items-center sm:items-start w-fit">
-              <div className="md:pl-4 pl-2 md:mb-[-3%]">
+          <div className="flex flex-col items-center justify-center w-full bg-background px-2 py-6 sm:p-8">
+            <div className="flex flex-col items-center w-full max-w-2xl">
+              <div className="w-full px-2 sm:px-4 mb-2">
                 <ClockDescription
                   schedule={mapScheduleWithClassNames(
                     thisWeek[getTodayIndex()].schedule,
@@ -152,15 +126,17 @@ function Home() {
               />
             </div>
           </div>
-          <div className="w-full p-8 pt-0 mt-4 bg-background justify-center flex">
-            <Schedule
-              schedule={mapScheduleWithClassNames(
-                thisWeek[getTodayIndex()].schedule,
-                classNames
-              )}
-            />
+          <div className="w-full px-2 sm:px-8 pt-0 mt-4 bg-background flex justify-center">
+            <div className="w-full max-w-2xl">
+              <Schedule
+                schedule={mapScheduleWithClassNames(
+                  thisWeek[getTodayIndex()].schedule,
+                  classNames
+                )}
+              />
+            </div>
           </div>
-          <div className="py-10 md:py-0"></div>
+          <div className="py-6 md:py-0"></div>
           <div className="w-full h-4 bg-background" />
         </>
       )}

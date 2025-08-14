@@ -1,6 +1,7 @@
+
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 
-export type Theme = 'light' | 'dark' | 'blue';
+export type Theme = 'light' | 'dark' | 'blue' | 'forest' | 'rose' | 'ocean' | 'sunset';
 
 interface ThemeContextType {
   theme: Theme;
@@ -15,28 +16,27 @@ interface ThemeProviderProps {
 }
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>(() => {
+  const [theme, setThemeState] = useState<Theme>(() => {
     const saved = localStorage.getItem('theme') as Theme;
     return saved || 'light';
   });
 
   useEffect(() => {
     const root = document.documentElement;
-    
-    // Remove existing theme classes/attributes
     root.classList.remove('dark');
     root.removeAttribute('data-theme');
-    
-    // Apply new theme
     if (theme === 'dark') {
       root.classList.add('dark');
     } else {
       root.setAttribute('data-theme', theme);
     }
-    
     localStorage.setItem('theme', theme);
   }, [theme]);
 
+  const setTheme = (newTheme: Theme) => {
+    setThemeState(newTheme);
+    localStorage.setItem('theme', newTheme);
+  };
 
   const updateThemeColor = (colorVar: string, value: string) => {
     document.documentElement.style.setProperty(`--${colorVar}`, value);
