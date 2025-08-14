@@ -30,15 +30,7 @@ const BackButton: React.FC = () => {
 
 const Info: React.FC = () => (
   <div className="min-h-screen flex items-center justify-center bg-background text-text">
-    <div className="p-6 max-w-2xl w-full">
-         <button
-           className="mb-4 text-lg font-bold text-primary border-2 border-primary rounded px-4 py-2 hover:bg-primary/10 flex items-center justify-center"
-           onClick={() => window.history.back()}
-           aria-label="Back"
-           style={{ outline: 'none' }}
-         >
-           ← Back
-         </button>
+  <div className="pt max-w-2xl w-full">
     <h1 className="text-2xl font-bold mb-4">Project Information</h1>
     <section className="mb-6">
       <h2 className="text-xl font-semibold mb-2">Team</h2>
