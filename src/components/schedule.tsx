@@ -32,6 +32,28 @@ const Schedule: React.FC<ScheduleProps> = ({ schedule }) => {
     };
   }, [schedule]);
 
+  // Update document.title with minutes left
+  useEffect(() => {
+    const updateTitle = () => {
+      if (!activePeriodInfo.period) {
+        document.title = "TPSTIME";
+        return;
+      }
+      // Get current time and period end time
+      const now = new Date();
+      const [endHour, endMinute] = activePeriodInfo.period.end.split(":").map(Number);
+      const end = new Date();
+      end.setHours(endHour, endMinute, 0, 0);
+      let diffMs = end.getTime() - now.getTime();
+      let minutesLeft = Math.ceil(diffMs / (1000 * 60));
+      if (minutesLeft < 0) minutesLeft = 0;
+      document.title = `${minutesLeft} minute${minutesLeft === 1 ? '' : 's'} left`;
+    };
+    updateTitle();
+    const interval = setInterval(updateTitle, 1000);
+    return () => clearInterval(interval);
+  }, [activePeriodInfo.period]);
+
   return (
     <div className="w-full">
   <h2 className="text-4xl md:text-7xl py-8 text-text-secondary" style={{marginTop: '+85px'}}>{formattedDate}</h2>
