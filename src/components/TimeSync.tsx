@@ -20,7 +20,7 @@ const TimeSync: React.FC = () => {
     const fetchServerTime = async () => {
       try {
         const t0 = performance.now();
-        const response = await fetch('http://localhost:3001/api/time');
+        const response = await fetch('http://tpstime.trinityprep.org:3001/api/time');
         const t1 = performance.now();
         if (!response.ok) throw new Error('Failed to fetch time');
         const data = await response.json();
