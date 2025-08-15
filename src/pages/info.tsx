@@ -35,39 +35,34 @@ const Info: React.FC = () => (
     <section className="mb-6">
       <h2 className="text-xl font-semibold mb-2">Team</h2>
       <ul className="list-disc ml-6">
-        <li><strong>Developed By:</strong> Joe Borgman and Asad Sadikov</li>
-        <li><strong>Helper:</strong> Ryo Kimura</li>
-        <li><strong>Original Founder:</strong> James Hawley</li>
-        <li><strong>Sponsors:</strong> Alex Podchaski and Tim Eischens</li>
+        <li><strong>Created By:</strong> James Hawley</li>
+        <li><strong>Development Team:</strong> Joe Borgman and Asad Sadikov</li>
+        <li><strong>Assistant Developer:</strong> Ryo Kimura</li>
+        <li><strong>Project Sponsors:</strong> Alex Podchaski and Tim Eischens</li>
       </ul>
     </section>
   <section className="mb-6">
       <h2 className="text-xl font-semibold mb-2">To Be Implemented</h2>
       <ul className="list-disc ml-6">
         <li>Google authentication of your TPS account</li>
-        <li>Ability to access website without being on TPS wifi</li>
         <li>Display of a personal class schedule</li>
-  {/* Theme switching removed from To Be Implemented */}
         <li>Customizable schedule editor</li>
-      </ul>
-    </section>
-    <section className="mb-6">
-      <h2 className="text-xl font-semibold mb-2">Feature List</h2>
-      <ul className="list-disc ml-6">
-        <li>Clock and time display</li>
-        <li>Logging button</li>
-        <li>Weekday selection</li>
-  <li>Responsive design</li>
       </ul>
     </section>
     <section className="mb-6">
       <h2 className="text-xl font-semibold mb-2">Changelog</h2>
       <ul className="list-disc ml-6">
-        <li>Added info page</li>
+        <li>v- 1.0.0 - Hawley J.</li>
+        <li>v- 2.0.0 - Borgman J. and Sadikov A.</li>
+      </ul>
+    </section>
+    <section className="mb-6">
+      <h2 className="text-xl font-semibold mb-2">New Features(v- 2.0.0)</h2>
+      <ul className="list-disc ml-6">
+        <li>Info page</li>
         <li>Improved navigation with hamburger menu</li>
-        <li>Minor UI enhancements</li>
         <li>Added TimeSync with server (Sometimes offline)</li>
-        <li>Added Theme switching (Many options available)</li>
+        <li>Added Theme switching </li>
       </ul>
     </section>
     </div>
