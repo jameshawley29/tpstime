@@ -55,28 +55,33 @@ export const cSchedule = [
 
 // Grade-specific schedules - these can be easily modified as variables 
 
-export const middleSchoolSchedule = [
-  new ClassPeriod("Advisory", "08:00", "08:20"),
-  new ClassPeriod("2nd Period", "08:25", "09:45", 2),
-  new ClassPeriod("Flex/Break", "09:50", "10:15"),
-  new ClassPeriod("4th Period", "10:20", "11:40", 4),
-  new ClassPeriod("Lunch", "11:45", "12:25"),
-  new ClassPeriod("Middle Block/Chapel", "12:30", "13:20"),
-  new ClassPeriod("6th Period", "13:25", "14:45", 6),
-  new ClassPeriod("Study Period", "14:50", "15:15")
-];
-
 export const highSchoolSchedule = [
-  new ClassPeriod("Advisory", "08:00", "08:20"),
-  new ClassPeriod("2nd Period", "08:25", "09:45", 2),
-  new ClassPeriod("Flex/Break", "09:50", "10:15"),
-  new ClassPeriod("4th Period", "10:20", "11:40", 4),
-  new ClassPeriod("Middle Block/Chapel", "11:45", "12:35"),
+  new ClassPeriod("Advisory", "08:00", "08:05"),
+  new ClassPeriod("1st Period", "08:10", "08:55", 1),
+  new ClassPeriod("2nd Period", "09:00", "09:45", 2),
+  new ClassPeriod("Flex/Break", "09:50", "10:10"),
+  new ClassPeriod("3rd Period", "10:15", "11:00", 3),
+  new ClassPeriod("4th Period", "11:05", "11:50", 4),
+  new ClassPeriod("5th Period", "11:55", "12:40", 5),
   new ClassPeriod("Lunch", "12:40", "13:20"),
-  new ClassPeriod("6th Period", "13:25", "14:45", 6),
-  new ClassPeriod("Study Period", "14:50", "15:15")
+  new ClassPeriod("6th Period", "13:25", "14:10", 6),
+  new ClassPeriod("7th Period", "14:15", "15:00", 7),
+  new ClassPeriod("Study Period", "15:00", "15:20")
 ];
 
+export const middleSchoolSchedule = [
+  new ClassPeriod("Advisory", "08:00", "08:05"),
+  new ClassPeriod("1st Period", "08:10", "08:55", 1),
+  new ClassPeriod("2nd Period", "09:00", "09:45", 2),
+  new ClassPeriod("Flex/Break", "09:50", "10:10"),
+  new ClassPeriod("3rd Period", "10:15", "11:00", 3),
+  new ClassPeriod("4th Period", "11:05", "11:50", 4),
+  new ClassPeriod("Lunch", "11:55", "12:40"),
+  new ClassPeriod("5th Period", "12:40", "13:20", 5),
+  new ClassPeriod("6th Period", "13:25", "14:10", 6),
+  new ClassPeriod("7th Period", "14:15", "15:00", 7),
+  new ClassPeriod("Study Period", "15:00", "15:20")
+];
 
 
 
