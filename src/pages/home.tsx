@@ -15,10 +15,10 @@ function Home() {
   // Use the grade-based schedule as the daily schedule
   const ADay = { title: "A", schedule: gradeBasedSchedule };
   const BDay = { title: "B", schedule: gradeBasedSchedule };
-  const CDAY = { title: "C", schedule: gradeBasedSchedule };
+  const CDay = { title: "C", schedule: gradeBasedSchedule };
 
 
-  const thisWeek: WeeklySchedule = [ADay, ADay, BDay, CDAY, ADay];
+  const thisWeek: WeeklySchedule = [ADay, ADay, BDay, CDay, ADay];
 
   return (
     <>
